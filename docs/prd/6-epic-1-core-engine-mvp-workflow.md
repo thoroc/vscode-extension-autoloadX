@@ -41,9 +41,9 @@ of installed extensions, **so that** I can generate a list of proposed changes (
 1. The engine loads a default mapping of project contexts to recommended extension IDs from a bundled JSON file.
 2. The engine retrieves the list of all extensions currently installed by the user.
 3. Given a list of detected project contexts, the engine correctly identifies which installed extensions should be
-    enabled.
+   enabled.
 4. The engine identifies all other managed extensions that are currently enabled but are not relevant to the detected
-    contexts, marking them for disabling.
+   contexts, marking them for disabling.
 5. The engine produces a clear data structure containing two lists: `extensionsToEnable` and `extensionsToDisable`.
 
 ## Story 1.4: Build and Display the Approval Prompt
@@ -68,10 +68,28 @@ that** the extension can fulfill its core purpose and be transparent about its a
 ### Acceptance Criteria
 
 1. When the user clicks "Apply" on the prompt, the extension programmatically enables all extensions in the
-    `extensionsToEnable` list.
+   `extensionsToEnable` list.
 2. When the user clicks "Apply", the extension programmatically disables all extensions in the `extensionsToDisable`
-    list.
+   list.
 3. When the user clicks "Cancel", no changes are made.
 4. In both cases, the dialog is dismissed.
 5. Every enable and disable action is logged with the extension's friendly name to a dedicated "AutoLoadX" output
-    channel.
+   channel.
+
+## Story 1.6: Error Handling and User Feedback for Extension Actions
+
+**As a** Developer, **I want** to implement robust error handling and user feedback mechanisms for extension
+enable/disable actions, **so that** users are informed of any issues and the extension behaves reliably in all
+scenarios.
+
+### Acceptance Criteria
+
+1. If an extension enable/disable action fails, the user is notified via a VSCode notification with a clear error
+   message.
+2. All errors are logged to the "AutoLoadX" output channel with relevant details (extension name, action attempted,
+   error message).
+3. The extension gracefully handles cases where an extension cannot be enabled/disabled due to VSCode API limitations or
+   permission issues.
+4. If any action fails, the remaining actions are still attempted, and the user is informed of partial success/failure.
+5. The extension provides a summary notification after all actions, indicating which changes succeeded and which failed.
+6. All error and success messages adhere to accessibility standards (screen reader friendly, clear language).

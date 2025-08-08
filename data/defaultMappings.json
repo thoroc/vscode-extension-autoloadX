@@ -1,0 +1,53 @@
+{
+  "python": [
+    "ms-python.python"
+  ],
+  "typescript": [
+    "ms-vscode.vscode-typescript-next"
+  ],
+  "javascript": [
+    "dbaeumer.vscode-eslint"
+  ],
+  "go": [
+    "golang.go"
+  ],
+  "node": [
+    "dbaeumer.vscode-eslint"
+  ],
+  "java": [
+    "redhat.java"
+  ],
+  "ruby": [
+    "rebornix.Ruby"
+  ],
+  "csharp": [
+    "ms-dotnettools.csharp"
+  ],
+  "cpp": [
+    "ms-vscode.cpptools"
+  ],
+  "php": [
+    "felixfbecker.php-debug"
+  ],
+  "rust": [
+    "rust-lang.rust-analyzer"
+  ],
+  "kotlin": [
+    "fwcd.kotlin"
+  ],
+  "dart": [
+    "Dart-Code.dart-code"
+  ],
+  "shell": [
+    "timonwong.shellcheck"
+  ],
+  "objective-c": [
+    "llvm-vs-code-extensions.vscode-clangd"
+  ],
+  "scala": [
+    "scala-lang.scala"
+  ],
+  "swift": [
+    "vknabel.vscode-swift-development-environment"
+  ]
+}
