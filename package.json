@@ -1,5 +1,5 @@
 {
-  "name": "@thoroc/vscode-extension-autoloadx",
+  "name": "vscode-extension-autoloadx",
   "publisher": "thoroc",
   "author": "Thomas Roche",
   "version": "0.0.1",
