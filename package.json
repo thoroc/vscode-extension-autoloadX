@@ -18,7 +18,7 @@
     "format:docs": "prettier --write '**/*.md'",
     "format:pkg": "prettier --write package.json",
     "lint": "eslint . --ext .ts,.js",
-    "lint:docs": "markdownlint-cli2 '**/*.md'",
+    "lint:docs": "markdownlint-cli2 '**/*.md' '#node_modules'",
     "lint:eslint": "eslint . --ext .ts,.js --config eslint.config.js",
     "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts registry.npmjs.org --allowed-schemes https:",
     "knip": "knip --reporter compact",
