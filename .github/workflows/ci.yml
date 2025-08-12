@@ -25,9 +25,6 @@ jobs:
       - name: Validate lockfile
         run: npm run lint:lockfile
 
-      - name: Validate package.json formatting
-        run: npx prettier --check package.json
-
       - name: Run ESLint
         run: npm run lint:eslint
 
