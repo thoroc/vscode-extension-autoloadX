@@ -10,6 +10,11 @@ sequenceDiagram
 
     User->>VSCode: Opens a new workspace
     VSCode->>AutoLoadX: Activates extension
+    AutoLoadX->>AutoLoadX: Checks settings in prioritized order
+    AutoLoadX->>AutoLoadX: Reads from Local Repository (highest priority)
+    AutoLoadX->>AutoLoadX: Reads from Global Settings (fallback)
+    AutoLoadX->>AutoLoadX: Reads from Extension Directory (last resort)
+    AutoLoadX->>AutoLoadX: Applies settings based on priority
     AutoLoadX->>RecommendationEngine: run()
     RecommendationEngine->>RecommendationEngine: Scans project files
     RecommendationEngine->>RecommendationEngine: Gets installed extensions
