@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { scanProjectContexts } from './contextScanner';
+import { scanProjectContexts } from '../../src/services/contextScanner';
 
 describe('scanProjectContexts', () => {
   it('should detect python and node contexts in a sample workspace', async () => {

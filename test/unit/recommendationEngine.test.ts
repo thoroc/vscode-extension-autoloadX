@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { loadDefaultMappings, recommendExtensions } from './recommendationEngine';
+import { loadDefaultMappings, recommendExtensions } from '../../src/services/recommendationEngine';
 
 jest.mock('vscode');
 

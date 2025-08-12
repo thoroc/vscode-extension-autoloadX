@@ -1,6 +1,6 @@
 jest.mock('vscode');
 import * as vscode from 'vscode';
-import { showApprovalPrompt } from './userInterfaceService';
+import { showApprovalPrompt } from '../../src/services/userInterfaceService';
 
 describe('showApprovalPrompt', () => {
   it('should show modal with correct content and return apply/cancel', async () => {

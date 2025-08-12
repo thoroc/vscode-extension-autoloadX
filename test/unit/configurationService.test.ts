@@ -1,6 +1,6 @@
 jest.mock('vscode');
 import * as vscode from 'vscode';
-import { getAutoLoadXConfig } from './configurationService';
+import { getAutoLoadXConfig } from '../../src/services/configurationService';
 
 describe('getAutoLoadXConfig', () => {
   it('reads whitelist, blacklist, and customMappings from settings', () => {

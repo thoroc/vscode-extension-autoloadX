@@ -1,6 +1,6 @@
 jest.mock('vscode');
 import * as vscode from 'vscode';
-import { AutoLoadXLogger, disableExtensions, enableExtensions } from './extensionManager';
+import { AutoLoadXLogger, disableExtensions, enableExtensions } from '../../src/services/extensionManager';
 
 describe('extensionManager', () => {
   let logger: AutoLoadXLogger;
