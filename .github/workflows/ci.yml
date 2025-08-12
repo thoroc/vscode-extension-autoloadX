@@ -28,7 +28,7 @@ jobs:
         run: npm test
 
       - name: Upload coverage report
-        if: success() && exists('coverage/lcov.info')
+        if: success() && hashFiles('coverage/lcov.info') != ''
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
