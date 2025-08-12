@@ -8,12 +8,12 @@ pre-commit:
     '2. format-code':
       glob: '*.{ts,yml,yaml,json}'
       interactive: true
-      run: 'npx nx format:write --files {staged_files}'
+      run: 'npx prettier --write {staged_files}'
       stage_fixed: true
     '3. format-docs':
       glob: '**/*.md,!**/.gitlab/merge_request_templates/*.md'
       interactive: true
-      run: 'npx nx format:write --files {staged_files}'
+      run: 'npx prettier --write {staged_files}'
       stage_fixed: true
     '4. lint-docs':
       glob: '**/*.md,!**/.gitlab/merge_request_templates/*.md'

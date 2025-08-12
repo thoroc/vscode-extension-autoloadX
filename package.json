@@ -11,8 +11,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "format": "prettier --check 'src/**/*.ts'",
-    "format:config": "prettier --check '{*.yml,*.json}'",
+    "format": "prettier --write 'src/**/*.ts'",
+    "format:config": "prettier --write '{*.yml,*.json}'",
     "format:docs": "prettier --write '**/*.md'",
     "format:pkg": "prettier --write package.json",
     "lint": "eslint . --ext .ts,.js",
