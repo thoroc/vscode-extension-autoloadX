@@ -4,8 +4,10 @@
 
 This project uses GitHub Actions for CI/CD. There are two main workflows:
 
-- **CI Workflow** (`.github/workflows/ci.yml`): Runs on push and pull request to `main`. Installs dependencies, builds the extension, runs tests, and uploads coverage and VSIX artifacts.
-- **Deploy Workflow** (`.github/workflows/deploy.yml`): Runs on release or tag. Packages the extension and publishes it to the VS Code Marketplace and GitHub Releases using repository secrets.
+- **CI Workflow** (`.github/workflows/ci.yml`): Runs on push and pull request to `main`. Installs dependencies, builds
+  the extension, runs tests, and uploads coverage and VSIX artifacts.
+- **Deploy Workflow** (`.github/workflows/deploy.yml`): Runs on release or tag. Packages the extension and publishes it
+  to the VS Code Marketplace and GitHub Releases using repository secrets.
 
 ## Updating Workflows
 
