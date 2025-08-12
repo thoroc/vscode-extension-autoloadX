@@ -6,11 +6,11 @@ Our testing strategy follows the principles of the testing pyramid to ensure a f
 
 ```text
       Manual E2E Testing
-     /        \
+     /        \\
 Automated E2E Tests (Workflow)
-   /            \
+   /            \\
 Integration Tests (Services + VSCode API)
- /                 \
+ /                 \\
 Unit Tests (Core Logic)
 ```
 
@@ -25,27 +25,28 @@ All test files will be co-located with the source files they are testing (e.g., 
 - **Example (`recommendationEngine.test.ts`):**
 
   ```typescript
-  it("should recommend enabling the Python extension for a Python project", () => {
+  it(\"should recommend enabling the Python extension for a Python project\", () => {
     // Mock the ConfigurationService to return Python mappings
     // Mock the ExtensionManager to return a list of installed extensions
     const engine = new RecommendationEngine(mockConfigService, mockExtensionManager);
-    const recommendations = await engine.generateRecommendations(["python"]);
+    const recommendations = await engine.generateRecommendations([\"python\"]);
     expect(recommendations).toContainEqual({
-      id: "ms-python.python",
-      friendlyName: "Python",
-      action: "enable",
+      id: \"ms-python.python\",
+      friendlyName: \"Python\",
+      action: \"enable\",
     });
   });
 
-  it("should prioritize local repository settings over global settings", () => {
-    // Mock ConfigurationService to return conflicting settings
+  it(\"should merge hardcoded default mappings with user-defined mappings\", () => {
+    // Mock ConfigurationService to return default and user-defined mappings
     const mockConfigService = new MockConfigurationService({
-      local: { whitelist: ["local.extension"] },
-      global: { whitelist: ["global.extension"] },
+      defaultMappings: { python: [\"ms-python.python\"] },
+      userMappings: { python: [\"custom-python.extension\"] },
     });
-    const config = mockConfigService.getSettings();
-    expect(config.whitelist).toContain("local.extension");
-    expect(config.whitelist).not.toContain("global.extension");
+    const mappings = mockConfigService.getMappings();
+    expect(mappings).toEqual({
+      python: [\"custom-python.extension\"], // User-defined mappings take precedence
+    });
   });
   ```
 
@@ -56,21 +57,32 @@ All test files will be co-located with the source files they are testing (e.g., 
 - **Example (`configurationService.test.ts`):**
 
   ```typescript
-  it("should correctly read the whitelist from the settings.json file", async () => {
+  it(\"should correctly read the whitelist from the settings.json file\", async () => {
     // Programmatically write to the settings.json of the test VSCode instance
-    await setTestSetting("autoLoadX.whitelist", ["some.extension"]);
+    await setTestSetting(\"autoLoadX.whitelist\", [\"some.extension\"]);
     const configService = new ConfigurationService();
     const whitelist = configService.getWhitelist();
-    expect(whitelist).toEqual(["some.extension"]);
+    expect(whitelist).toEqual([\"some.extension\"]);
   });
 
-  it("should apply settings in the correct priority order", async () => {
+  it(\"should apply settings in the correct priority order\", async () => {
     // Mock settings in local repository, global, and extension directory
-    await setTestSetting("autoLoadX.whitelist", ["local.extension"], "local");
-    await setTestSetting("autoLoadX.whitelist", ["global.extension"], "global");
+    await setTestSetting(\"autoLoadX.whitelist\", [\"local.extension\"], \"local\");
+    await setTestSetting(\"autoLoadX.whitelist\", [\"global.extension\"], \"global\");
     const configService = new ConfigurationService();
     const whitelist = configService.getWhitelist();
-    expect(whitelist).toEqual(["local.extension"]);
+    expect(whitelist).toEqual([\"local.extension\"]);
+  });
+
+  it(\"should merge hardcoded default mappings with user-defined mappings\", async () => {
+    // Mock default and user-defined mappings
+    const defaultMappings = { python: [\"ms-python.python\"] };
+    const userMappings = { python: [\"custom-python.extension\"] };
+    const configService = new ConfigurationService(defaultMappings, userMappings);
+    const mappings = await configService.getMappings();
+    expect(mappings).toEqual({
+      python: [\"custom-python.extension\"], // User-defined mappings take precedence
+    });
   });
   ```
 
@@ -81,11 +93,11 @@ All test files will be co-located with the source files they are testing (e.g., 
 - **Example (`e2e.test.ts`):**
 
   ```typescript
-  it("should enable the ESLint extension when a Node.js project is detected", async () => {
+  it(\"should enable the ESLint extension when a Node.js project is detected\", async () => {
     // 1. Set up a mock workspace with a package.json file
     // 2. Run the core logic (scan, generate recommendations, apply changes)
     // 3. Assert that the 'dbaeumer.vscode-eslint' extension is now enabled
-    const eslintExtension = vscode.extensions.getExtension("dbaeumer.vscode-eslint");
+    const eslintExtension = vscode.extensions.getExtension(\"dbaeumer.vscode-eslint\");
     expect(eslintExtension.isActive).toBe(true);
   });
   ```

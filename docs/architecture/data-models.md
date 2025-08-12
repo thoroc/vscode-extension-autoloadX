@@ -43,7 +43,7 @@ output of the recommendation engine.
 interface ExtensionRecommendation {
   id: string;
   friendlyName: string;
-  action: "enable" | "disable";
+  action: \"enable\" | \"disable\";
 }
 ```
 
@@ -54,7 +54,7 @@ interface ExtensionRecommendation {
 ## ExtensionMapping
 
 **Purpose:** Defines the mapping between a project context and the VSCode extensions that should be enabled for it. This
-will be stored in a bundled JSON file and can be extended by user configuration.
+mapping is now hardcoded in the codebase but can be extended or overridden by user configuration in `settings.json`.
 
 **Key Attributes:**
 

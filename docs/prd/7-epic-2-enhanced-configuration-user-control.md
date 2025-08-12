@@ -53,3 +53,16 @@ ensure the most relevant settings are applied based on the project context.
 4. Users are notified of the change in settings storage location.
 5. The new storage location adheres to the project's security and performance guidelines.
 6. Unit and integration tests are updated to reflect the new storage location and priority order.
+
+## Story 2.4: Define Default Mappings in Code
+
+**As a** Developer, **I want** the default mappings to be defined as part of the codebase, **so that** the extension has
+a reliable baseline configuration while still allowing users to override it.
+
+### Acceptance Criteria
+
+1. The default mappings are hardcoded in the extension's codebase.
+2. Users can redefine part or all of the default mappings through the `settings.json` file.
+3. The recommendation engine merges user-defined mappings with the default mappings, with user-defined mappings taking
+   precedence.
+4. Documentation is updated to explain the default mappings and how users can override them.
