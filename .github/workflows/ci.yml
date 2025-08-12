@@ -32,7 +32,7 @@ jobs:
         run: npm run lint:eslint
 
       - name: Run Prettier
-        run: npm run lint:prettier
+        run: npm run format:check
 
       - name: Detect unused files with Knip
         run: npm run lint:unused
