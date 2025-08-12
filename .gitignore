@@ -1,6 +1,7 @@
 .bmad-core/
 .claude/
 .gemini/
+.opencode/
 coverage/
 dist/
 !github/
