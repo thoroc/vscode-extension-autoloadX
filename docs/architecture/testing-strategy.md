@@ -1,6 +1,7 @@
 # Testing Strategy
 
-Our testing strategy follows the principles of the testing pyramid to ensure a fast, reliable, and maintainable codebase.
+Our testing strategy follows the principles of the testing pyramid to ensure a fast, reliable, and maintainable
+codebase.
 
 ## Testing Pyramid
 
@@ -16,12 +17,14 @@ Unit Tests (Core Logic)
 
 ## Test Organization
 
-All test files will be co-located with the source files they are testing (e.g., `recommendationEngine.test.ts` will be next to `recommendationEngine.ts`).
+All test files will be co-located with the source files they are testing (e.g., `recommendationEngine.test.ts` will be
+next to `recommendationEngine.ts`).
 
 ### Unit Tests
 
 - **Framework:** Jest
-- **Focus:** Testing individual services and functions in isolation, with their dependencies mocked. The primary focus will be on the business logic within the `RecommendationEngine` and the prioritized settings logic.
+- **Focus:** Testing individual services and functions in isolation, with their dependencies mocked. The primary focus
+  will be on the business logic within the `RecommendationEngine` and the prioritized settings logic.
 - **Example (`recommendationEngine.test.ts`):**
 
   ```typescript
@@ -53,7 +56,8 @@ All test files will be co-located with the source files they are testing (e.g., 
 ### Integration Tests
 
 - **Framework:** `vscode-test` + Jest
-- **Focus:** Testing the services that interact directly with the VSCode API to ensure they behave correctly. These tests run inside a real VSCode instance.
+- **Focus:** Testing the services that interact directly with the VSCode API to ensure they behave correctly. These
+  tests run inside a real VSCode instance.
 - **Example (`configurationService.test.ts`):**
 
   ```typescript
@@ -89,7 +93,8 @@ All test files will be co-located with the source files they are testing (e.g., 
 ### E2E Tests
 
 - **Framework:** `vscode-test` + Jest
-- **Focus:** Testing the entire workflow from start to finish, bypassing the UI prompt. These tests verify that the correct side effects (enabling/disabling extensions) occur.
+- **Focus:** Testing the entire workflow from start to finish, bypassing the UI prompt. These tests verify that the
+  correct side effects (enabling/disabling extensions) occur.
 - **Example (`e2e.test.ts`):**
 
   ```typescript
