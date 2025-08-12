@@ -23,3 +23,7 @@ pre-commit:
     '5. lint-lockfile':
       glob: 'package-lock.json'
       run: 'npx lockfile-lint --validate-https --path'
+    '6. lint-unused-deps':
+      glob: '*.{ts,js,json}'
+      run: 'npx knip --report summary'
+
