@@ -42,6 +42,8 @@
        development tasks.
      - As a contributor, I want clear and actionable logs from the action so that I can understand its impact on the
        project.
+     - As a maintainer, I want the action to check if all tasks in an issue are completed and update the label from "in
+       progress" to "completed" automatically.
 
    - **Acceptance Criteria:**
      - The GitHub Action for Gemini CLI is integrated into the project.

@@ -32,5 +32,6 @@ The key indicators of the extension's health and performance will be gathered fr
 
 - **User Feedback:** Reviews and ratings on the VSCode Marketplace.
 - **Issue Reports:** Bug reports and feature requests on GitHub, which will be enhanced by the diagnostic information
-  provided by users.
+  provided by users. This includes logs from the new GitHub Action for automating issue label updates, ensuring
+  transparency and traceability.
 - **Manual Profiling:** Periodic performance analysis by the development team using VSCode's built-in tools.
