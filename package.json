@@ -1,4 +1,10 @@
 {
+  "name": "@thoroc/vscode-extension-autoloadx",
+  "publisher": "thoroc",
+  "author": "Thomas Roche",
+  "version": "0.0.1",
+  "description": "A VSCode extension for autoloading extensions",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.2.1",
