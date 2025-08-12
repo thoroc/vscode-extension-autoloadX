@@ -34,6 +34,9 @@ jobs:
       - name: Run Prettier
         run: npm run lint:prettier
 
+      - name: Detect unused files with Knip
+        run: npm run lint:unused
+
       - name: Run markdownlint-cli2
         run: npx markdownlint-cli2 '**/*.md'
 

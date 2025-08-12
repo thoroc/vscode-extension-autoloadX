@@ -20,6 +20,7 @@
     "lint:eslint": "eslint . --ext .ts,.js",
     "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts npmjs.com --allowed-schemes https",
     "lint:prettier": "prettier --check .",
+    "lint:unused": "knip --report summary",
     "package": "vsce package --out dist/",
     "postinstall": "npx lefthook install",
     "test": "jest"
@@ -31,6 +32,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "jest": "^30.0.5",
+    "knip": "^5.62.0",
     "lefthook": "^1.12.3",
     "lockfile-lint": "^4.14.1",
     "markdownlint-cli2": "^0.18.1",
