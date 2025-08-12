@@ -4,7 +4,7 @@ import { loadDefaultMappings, recommendExtensions } from '../../src/services/rec
 jest.mock('vscode');
 
 describe('recommendationEngine', () => {
-  const mappingsPath = path.join(__dirname, '../../data/defaultMappings.json');
+  const mappingsPath = path.join(__dirname, '../fixtures/defaultMappings.json');
   const defaultMappings = loadDefaultMappings(mappingsPath);
   const installed = [
     'ms-python.python',
