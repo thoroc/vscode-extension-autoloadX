@@ -1,13 +1,28 @@
 {
   "name": "vscode-extension-autoloadx",
-  "publisher": "thoroc",
-  "author": "Thomas Roche",
   "version": "0.0.2",
   "description": "A VSCode extension for autoloading extensions",
   "repository": "https://github.com/thoroc/vscode-extension-autoloadX",
+  "author": "Thomas Roche",
+  "publisher": "thoroc",
   "license": "MIT",
   "engines": {
     "vscode": "^1.1.37"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --check 'src/**/*.ts'",
+    "format:config": "prettier --check '{*.yml,*.json}'",
+    "format:docs": "prettier --check '*.md'",
+    "format:pkg": "prettier --write package.json",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:docs": "markdownlint-cli2 '**/*.md'",
+    "lint:eslint": "eslint . --ext .ts,.js",
+    "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts npmjs.com --allowed-schemes https",
+    "lint:prettier": "prettier --check .",
+    "package": "vsce package --out dist/",
+    "postinstall": "npx lefthook install",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
@@ -21,25 +36,11 @@
     "markdownlint-cli2": "^0.18.1",
     "mkdirp": "^3.0.1",
     "mocha": "^11.7.1",
-    "pkg": "^5.8.1",
     "prettier": "^3.6.2",
+    "prettier-plugin-pkg": "^0.21.2",
     "ts-jest": "^29.4.1",
     "typescript": "^5.9.2",
     "vsce": "^2.15.0",
     "vscode": "^1.1.37"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "package": "vsce package --out dist/",
-    "lint": "eslint . --ext .ts,.js",
-    "postinstall": "npx lefthook install",
-    "lint:eslint": "eslint . --ext .ts,.js",
-    "format": "prettier --check 'src/**/*.ts'",
-    "format:docs": "prettier --check '*.md'",
-    "format:config": "prettier --check '{*.yml,*.json}'",
-    "lint:docs": "markdownlint-cli2 '**/*.md'",
-    "format:pkg": "pkg format package.json",
-    "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts npmjs.com --allowed-schemes https"
   }
 }
