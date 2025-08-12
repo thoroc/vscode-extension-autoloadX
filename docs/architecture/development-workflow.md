@@ -36,7 +36,7 @@ This is the primary way to test the extension's functionality interactively.
 ### Automated Testing and Validation
 
 ```bash
-# Run all automated unit and integration tests
+# Run all automated unit tests
 npm test
 
 # Run tests in watch mode for active development
@@ -44,6 +44,27 @@ npm run test:watch
 
 # Lint the code to check for style issues
 npm run lint
+```
+
+#### Test Directory Structure
+
+All test-related files are now consolidated under the `test/` directory for better organization. The structure is as
+follows:
+
+```text
+test/
+├── fixtures/                # Test fixtures and sample data
+│   ├── sample-python-node/
+│   └── with-gitignore/
+├── mocks/                   # Jest mocks
+│   └── vscode.ts
+├── unit/                    # Unit tests
+│   ├── configurationService.test.ts
+│   ├── contextScanner.test.ts
+│   ├── extensionErrorHandler.test.ts
+│   ├── extensionManager.test.ts
+│   ├── recommendationEngine.test.ts
+│   └── userInterfaceService.test.ts
 ```
 
 ### Building the Extension
