@@ -20,7 +20,7 @@ The impact of this problem is twofold:
 
 1. **Productivity Loss:** Developers waste time managing their editor's configuration instead of writing code.
 2. **Performance Degradation:** Leaving all extensions enabled can lead to a bloated and slow VSCode environment,
-    increasing startup times and memory consumption, which degrades the overall developer experience.
+   increasing startup times and memory consumption, which degrades the overall developer experience.
 
 Existing solutions are lacking. While VSCode has workspace-specific settings, it does not have a built-in, intelligent
 mechanism to manage the _activation state_ of extensions based on project context automatically. This forces developers
@@ -36,14 +36,14 @@ automatically to their current task.
 The solution will work as follows:
 
 1. **Detection:** On opening a workspace, the extension will scan for project identifiers like file extensions (`.py`,
-    `.ts`), dependency files (`package.json`, `pom.xml`), and specific filenames (`Dockerfile`).
-2. **Recommendation & Activation:** Based on the detected context, the extension will consult a mapping of project
-    types to recommended extensions. It will then present the user with a single, clear dialog listing the recommended
-    actions (e.g., "Enable Python extension," "Install Prettier extension," "Disable Go extension").
+   `.ts`), dependency files (`package.json`, `pom.xml`), and specific filenames (`Dockerfile`).
+2. **Recommendation & Activation:** Based on the detected context, the extension will consult a mapping of project types
+   to recommended extensions. It will then present the user with a single, clear dialog listing the recommended actions
+   (e.g., "Enable Python extension," "Install Prettier extension," "Disable Go extension").
 3. **User Control:** The user will have the final say, with options to approve, deny, or ignore recommendations for the
-    current session or permanently for the workspace.
+   current session or permanently for the workspace.
 4. **Configuration:** The extension will be highly customizable, allowing users to override default recommendations,
-    whitelist extensions that should never be disabled, and blacklist extensions that should never be managed.
+   whitelist extensions that should never be disabled, and blacklist extensions that should never be managed.
 
 The key differentiator is the **automated, yet user-supervised** workflow. Unlike manual management, it removes the
 repetitive work. Unlike a fully opaque system, it keeps the user in control, building trust and preventing unexpected
@@ -244,9 +244,9 @@ with zero manual configuration, creating a completely seamless and tailored expe
 ### Immediate Actions
 
 1. **Technical Spike:** Assign a developer to create a proof-of-concept that validates the core technical assumption:
-    programmatically enabling and disabling an extension via the VSCode API.
+   programmatically enabling and disabling an extension via the VSCode API.
 2. **Default Mappings Research:** Begin compiling a list of the most popular and essential extensions for the top 10-15
-    programming languages to build the initial "sensible defaults" configuration.
+   programming languages to build the initial "sensible defaults" configuration.
 3. **UX/UI Wireframing:** Sketch out the user flow and design for the interactive approval prompt.
 
 ### PM Handoff

@@ -2,7 +2,8 @@
 
 ## ContextScanner
 
-**Responsibility:** Scans the workspace to detect the project context (e.g., 'typescript', 'python'). **Key Interfaces:**
+**Responsibility:** Scans the workspace to detect the project context (e.g., 'typescript', 'python'). **Key
+Interfaces:**
 
 - `scanWorkspace(): Promise<string[]>`: Scans the current workspace and returns an array of detected context names.
   **Dependencies:** `vscode.workspace` API **Technology Stack:** TypeScript
@@ -28,7 +29,8 @@ Interfaces:**
 
 ## ConfigurationService
 
-**Responsibility:** Manages all configuration for the extension. It loads the default mappings, which are hardcoded in the codebase, and merges them with user-defined settings from `settings.json`. **Key Interfaces:**
+**Responsibility:** Manages all configuration for the extension. It loads the default mappings, which are hardcoded in
+the codebase, and merges them with user-defined settings from `settings.json`. **Key Interfaces:**
 
 - `getMappings(): Promise<ExtensionMapping[]>`: Returns the final list of context-to-extension mappings.
 - `getWhitelist(): string[]`: Returns the list of whitelisted extension IDs.

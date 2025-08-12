@@ -13,7 +13,6 @@
 3. **Epic 3: Automated Build and Deployment with GitHub Actions:** Enable automatic build and deployment of the VS Code
    extension using GitHub Actions for continuous integration (CI) and continuous deployment (CD). This will improve
    reliability, speed, and developer productivity by automating manual processes.
-
    - **User Stories:**
      - As a developer, I want every commit to be built and tested automatically so I can catch issues early.
      - As a maintainer, I want deployments to be automated so releases are consistent and fast.
@@ -22,7 +21,6 @@
 4. **Epic 4: Release to Github:** Automate the release process to GitHub to enable potential users to test the MVP. This
    includes creating a new release when a Git tag is detected, packaging the VSCode extension in the correct format, and
    ensuring the extension is downloadable and installable from the release file.
-
    - **User Stories:**
      - As a developer, I want to create a new release on GitHub when a Git tag is detected so that users can download
        the latest version.
@@ -33,9 +31,7 @@
 
 5. **Epic 5: Integrate GitHub Action for Gemini:** Enhance project maintenance by automating Gemini CLI tasks within the
    CI/CD pipeline using the [Run Gemini CLI GitHub Action](https://github.com/marketplace/actions/run-gemini-cli).
-
    - **User Stories:**
-
      - As a maintainer, I want to integrate the GitHub Action for Gemini CLI so that repetitive tasks are automated and
        maintenance effort is reduced.
      - As a developer, I want the action to run automatically on relevant workflows so that I can focus on core

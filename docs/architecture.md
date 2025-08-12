@@ -469,9 +469,9 @@ This is the primary way to test the extension's functionality interactively.
 3. This will compile the extension and open a **new VSCode window** called the "Extension Development Host".
 4. In this **new window**, open a separate project to test against (e.g., a sample Python or TypeScript project).
 5. Use the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) in the new window to run the extension's commands, such as
-    `AutoLoadX: Detect Project Context and Recommend Extensions`.
+   `AutoLoadX: Detect Project Context and Recommend Extensions`.
 6. You can set breakpoints in the original `autoloadx` project window, and they will be hit when you trigger the
-    functionality in the new window.
+   functionality in the new window.
 
 #### Automated Testing and Validation
 
@@ -520,16 +520,16 @@ The CI/CD pipeline will be managed by GitHub Actions. The workflow will be defin
 **Jobs:**
 
 1. **`test`**:
-    - Checks out the code.
-    - Installs Node.js and dependencies (`npm ci`).
-    - Runs the linter (`npm run lint`).
-    - Runs the automated tests (`npm test`).
+   - Checks out the code.
+   - Installs Node.js and dependencies (`npm ci`).
+   - Runs the linter (`npm run lint`).
+   - Runs the automated tests (`npm test`).
 2. **`release`** (Manual Trigger):
-    - Requires the `test` job to pass.
-    - Checks out the code.
-    - Installs dependencies.
-    - Packages the extension (`npm run package`).
-    - Publishes the `.vsix` file to the VSCode Marketplace using a personal access token stored in GitHub secrets.
+   - Requires the `test` job to pass.
+   - Checks out the code.
+   - Installs dependencies.
+   - Packages the extension (`npm run package`).
+   - Publishes the `.vsix` file to the VSCode Marketplace using a personal access token stored in GitHub secrets.
 
 #### CI/CD Pipeline Configuration (`.github/workflows/ci.yaml`)
 

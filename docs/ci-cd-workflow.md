@@ -11,7 +11,8 @@ This project uses GitHub Actions for CI/CD. There are two main workflows:
 
 ## Gemini CLI Integration
 
-- **Gemini CLI Action**: The CI workflow now includes the [Run Gemini CLI GitHub Action](https://github.com/marketplace/actions/run-gemini-cli).
+- **Gemini CLI Action**: The CI workflow now includes the
+  [Run Gemini CLI GitHub Action](https://github.com/marketplace/actions/run-gemini-cli).
   - **Purpose**: Automates tasks like pull request reviews, issue triage, and code analysis.
   - **Setup**: Requires a `GEMINI_API_KEY` stored in GitHub Secrets.
   - **Usage**: Automatically runs during CI to enhance project maintenance.

@@ -20,16 +20,16 @@ The CI/CD pipeline will be managed by GitHub Actions. The workflow will be defin
 **Jobs:**
 
 1. **`test`**:
-    - Checks out the code.
-    - Installs Node.js and dependencies (`npm ci`).
-    - Runs the linter (`npm run lint`).
-    - Runs the automated tests (`npm test`).
+   - Checks out the code.
+   - Installs Node.js and dependencies (`npm ci`).
+   - Runs the linter (`npm run lint`).
+   - Runs the automated tests (`npm test`).
 2. **`release`** (Manual Trigger):
-    - Requires the `test` job to pass.
-    - Checks out the code.
-    - Installs dependencies.
-    - Packages the extension (`npm run package`).
-    - Publishes the `.vsix` file to the VSCode Marketplace using a personal access token stored in GitHub secrets.
+   - Requires the `test` job to pass.
+   - Checks out the code.
+   - Installs dependencies.
+   - Packages the extension (`npm run package`).
+   - Publishes the `.vsix` file to the VSCode Marketplace using a personal access token stored in GitHub secrets.
 
 ### CI/CD Pipeline Configuration (`.github/workflows/ci.yaml`)
 

@@ -18,12 +18,12 @@ of VSCode, not a noisy or disruptive add-on. The primary goal is to save the use
 ## Core Screens and Views (MVP)
 
 1. **Recommendation Prompt Dialog (Must-Have):** This is the main UI component. It will be a modal window that lists:
-    - A clear title (e.g., "AutoLoadX: Project Setup").
-    - A list of extensions to be **enabled**.
-    - A list of extensions to be **disabled**.
-    - Two primary action buttons: "Apply" and "Cancel".
+   - A clear title (e.g., "AutoLoadX: Project Setup").
+   - A list of extensions to be **enabled**.
+   - A list of extensions to be **disabled**.
+   - Two primary action buttons: "Apply" and "Cancel".
 2. **Output Channel Log (Must-Have):** A dedicated view in the VSCode "Output" panel where all actions are logged for
-    transparency and debugging.
+   transparency and debugging.
 
 ## Post-MVP UI Enhancements
 

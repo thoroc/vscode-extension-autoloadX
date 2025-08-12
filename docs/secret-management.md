@@ -25,4 +25,5 @@
 
 ## Additional Notes
 
-- For more information, see GitHub's documentation on [encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+- For more information, see GitHub's documentation on
+  [encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).

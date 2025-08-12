@@ -29,9 +29,9 @@ This is the primary way to test the extension's functionality interactively.
 3. This will compile the extension and open a **new VSCode window** called the "Extension Development Host".
 4. In this **new window**, open a separate project to test against (e.g., a sample Python or TypeScript project).
 5. Use the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) in the new window to run the extension's commands, such as
-    `AutoLoadX: Detect Project Context and Recommend Extensions`.
+   `AutoLoadX: Detect Project Context and Recommend Extensions`.
 6. You can set breakpoints in the original `autoloadx` project window, and they will be hit when you trigger the
-    functionality in the new window.
+   functionality in the new window.
 
 ### Automated Testing and Validation
 

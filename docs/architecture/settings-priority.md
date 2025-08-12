@@ -7,13 +7,11 @@ settings storage hierarchy and how it works.
 ## Settings Storage Locations
 
 1. **Local Repository** (Highest Priority):
-
    - Settings stored in the `.vscode` directory within the project.
    - Alternatively, the extension's own configuration file within the repository.
    - These settings are specific to the project and take precedence over all others.
 
 2. **Global Settings**:
-
    - The `settings.json` file for VSCode.
    - These settings apply across all projects and serve as a fallback if no local repository settings are found.
 
@@ -24,18 +22,15 @@ settings storage hierarchy and how it works.
 ## How It Works
 
 1. **Initialization**:
-
    - When the extension is activated, it immediately checks for settings in the prioritized order.
    - The first available settings file is read and applied.
 
 2. **Priority Order**:
-
    - The extension first looks for settings in the local repository.
    - If no local settings are found, it checks the global settings.
    - If neither local nor global settings are available, it falls back to the extension installation directory.
 
 3. **Conflict Resolution**:
-
    - If settings are found in multiple locations, the local repository settings always override global and extension
      directory settings.
 

@@ -9,7 +9,6 @@ The primary goal is to enforce good practices through githooks using
 ## Functional Requirements
 
 1. **Pre-commit Hook for Linting**
-
    - Implement a pre-commit hook using `lefthook` to automatically run linting checks on staged files.
    - Use `eslint` for linting `.ts` and `.js` files.
    - Use `markdownlint-cli2` for linting `.md` files.
@@ -17,34 +16,28 @@ The primary goal is to enforce good practices through githooks using
    - Provide clear error messages and instructions for resolving linting issues.
 
 2. **Pre-commit Hook for Formatting**
-
    - Implement a pre-commit hook using `lefthook` to automatically format staged files.
    - Use `Prettier` for formatting `.ts`, `.js`, `.json`, `.yaml`, and `.md` files.
    - Use `pkg` for formatting `package.json` files.
    - Allow contributors to skip formatting checks with a specific flag (e.g., `--no-verify`).
 
 3. **Pre-push Hook for Tests**
-
    - Implement a pre-push hook using `lefthook` to run unit tests before pushing changes.
    - Ensure the hook runs only the tests relevant to the changes (e.g., using `jest --changedSince`).
 
 4. **Configuration File for Lefthook**
-
    - Create a centralized `lefthook.yml` configuration file to manage all hooks.
    - Ensure the configuration is modular and easy to extend for future hooks.
 
 5. **Documentation for Contributors**
-
    - Update the `CONTRIBUTING.md` file to include instructions for setting up `lefthook`.
    - Provide troubleshooting steps for common issues with hooks.
 
 6. **Cross-Platform Compatibility**
-
    - Ensure all hooks work seamlessly on macOS, Linux, and Windows environments.
    - Test hooks in different shell environments (e.g., Bash, Zsh, PowerShell).
 
 7. **Performance Optimization**
-
    - Ensure hooks execute within a reasonable time frame (e.g., under 5 seconds for linting/formatting).
    - Use caching mechanisms where applicable to speed up repeated operations.
 
@@ -56,21 +49,17 @@ The primary goal is to enforce good practices through githooks using
 ## Non-Functional Requirements
 
 1. **Scalability**
-
    - The `lefthook` configuration should support adding new hooks without significant rework.
 
 2. **Maintainability**
-
    - Ensure the `lefthook.yml` file is well-documented and follows a consistent structure.
    - Use comments to explain the purpose of each hook.
 
 3. **Usability**
-
    - Hooks should provide clear and concise output to contributors.
    - Avoid overwhelming contributors with verbose logs unless explicitly requested (e.g., with a `--verbose` flag).
 
 4. **Reliability**
-
    - Hooks must execute consistently across different environments and setups.
    - Include automated tests to verify the functionality of hooks.
 
