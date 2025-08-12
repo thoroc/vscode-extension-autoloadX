@@ -4,5 +4,4 @@
 .opencode/
 coverage/
 dist/
-!github/
-!github/workflows/*
+!.github/workflows/*
