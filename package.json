@@ -22,6 +22,6 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "package": "vsce package"
+    "package": "vsce package --out dist/"
   }
 }
