@@ -17,6 +17,7 @@
     "eslint-plugin-prettier": "^5.5.4",
     "jest": "^30.0.5",
     "lefthook": "^1.12.3",
+    "lockfile-lint": "^4.14.1",
     "mkdirp": "^3.0.1",
     "mocha": "^11.7.1",
     "prettier": "^3.6.2",
@@ -30,6 +31,7 @@
     "test": "jest",
     "package": "vsce package --out dist/",
     "lint": "eslint . --ext .ts,.js",
-    "postinstall": "npx lefthook install"
+    "postinstall": "npx lefthook install",
+    "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts npmjs.com --allowed-schemes https"
   }
 }

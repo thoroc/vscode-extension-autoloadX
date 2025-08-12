@@ -2,7 +2,8 @@
 
 ## Overview
 
-Prettier is configured in this project to ensure consistent code formatting. It is integrated with Lefthook to run automatically on staged files during pre-commit.
+Prettier is configured in this project to ensure consistent code formatting. It is integrated with Lefthook to run
+automatically on staged files during pre-commit.
 
 ## Installation
 
@@ -22,7 +23,8 @@ npm run format
 
 ## Pre-commit Hook
 
-Prettier is configured to run automatically on staged files during pre-commit using Lefthook. This ensures that all committed code adheres to the project's formatting standards.
+Prettier is configured to run automatically on staged files during pre-commit using Lefthook. This ensures that all
+committed code adheres to the project's formatting standards.
 
 ## Configuration
 
