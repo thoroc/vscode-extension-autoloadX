@@ -2,4 +2,10 @@ pre-commit:
   parallel: true
   commands:
     eslint:
-      run: "npx eslint . --ext .ts,.js"
+      run: 'npx eslint . --ext .ts,.js --fix'
+      glob: '*.{ts,js}'
+      stage: true
+    prettier:
+      run: 'npx prettier --write'
+      glob: '*.{ts,js,md}'
+      stage: true
