@@ -25,6 +25,9 @@ jobs:
       - name: Validate lockfile
         run: npm run lint:lockfile
 
+      - name: Validate package.json formatting
+        run: npm run format:pkg
+
       - name: Build extension
         run: npm run build --if-present
 

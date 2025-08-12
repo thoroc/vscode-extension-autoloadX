@@ -21,6 +21,7 @@
     "markdownlint-cli2": "^0.18.1",
     "mkdirp": "^3.0.1",
     "mocha": "^11.7.1",
+    "pkg": "^5.8.1",
     "prettier": "^3.6.2",
     "ts-jest": "^29.4.1",
     "typescript": "^5.9.2",
@@ -33,6 +34,7 @@
     "package": "vsce package --out dist/",
     "lint": "eslint . --ext .ts,.js",
     "postinstall": "npx lefthook install",
+    "format:pkg": "pkg format package.json",
     "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts npmjs.com --allowed-schemes https"
   }
 }
