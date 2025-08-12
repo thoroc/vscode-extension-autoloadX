@@ -9,3 +9,7 @@ pre-commit:
       run: 'npx prettier --write'
       glob: '*.{ts,js,md}'
       stage: true
+    markdownlint:
+      run: 'npx markdownlint-cli2 '**/*.md''
+      glob: '*.md'
+      stage: true
