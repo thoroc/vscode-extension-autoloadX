@@ -4,4 +4,4 @@
 .opencode/
 coverage/
 dist/
-!.github/workflows/*
+!.github/workflows/*.yml
