@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { AutoLoadXLogger } from './extensionManager';
 
-export interface ExtensionActionResult {
+interface ExtensionActionResult {
   id: string;
   displayName: string;
   action: 'enable' | 'disable';

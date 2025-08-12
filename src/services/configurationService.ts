@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 
-export interface AutoLoadXConfig {
+interface AutoLoadXConfig {
   whitelist?: string[];
   blacklist?: string[];
   customMappings?: Record<string, string[]>;

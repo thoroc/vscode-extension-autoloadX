@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 
-export interface ApprovalPromptOptions {
+interface ApprovalPromptOptions {
   extensionsToEnable: { id: string; displayName: string }[];
   extensionsToDisable: { id: string; displayName: string }[];
 }

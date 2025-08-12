@@ -1,7 +1,6 @@
 import * as fs from 'fs';
-import * as vscode from 'vscode';
 
-export interface RecommendationResult {
+interface RecommendationResult {
   extensionsToEnable: string[];
   extensionsToDisable: string[];
 }
@@ -11,11 +10,11 @@ export function loadDefaultMappings(mappingsPath: string): Record<string, string
   return JSON.parse(raw);
 }
 
-export function getInstalledExtensions(): string[] {
-  return vscode.extensions.all.map((ext) => ext.id);
-}
+// export function getInstalledExtensions(): string[] {
+//   return vscode.extensions.all.map((ext) => ext.id);
+// }
 
-export function mergeMappings(
+function mergeMappings(
   defaultMappings: Record<string, string[]>,
   customMappings?: Record<string, string[]>,
 ): Record<string, string[]> {

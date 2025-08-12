@@ -35,7 +35,7 @@ jobs:
         run: npm run format:check
 
       - name: Detect unused files with Knip
-        run: npm run lint:unused
+        run: npx knip
 
       - name: Run markdownlint-cli2
         run: npx markdownlint-cli2 '**/*.md'

@@ -34,7 +34,3 @@ export async function disableExtensions(extensions: { id: string; displayName: s
     }
   }
 }
-
-export function dismissDialog() {
-  // VSCode modal dialogs are dismissed automatically after button click
-}
