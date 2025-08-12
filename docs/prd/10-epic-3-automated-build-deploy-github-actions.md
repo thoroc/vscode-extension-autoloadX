@@ -45,6 +45,10 @@ Automating these processes will improve reliability, speed, and developer produc
 - Misconfigured workflows could block releases
 - Leaked secrets could compromise the extension or publisher account
 
+## Dependencies
+
+- Epic 4: Release to GitHub depends on the successful implementation of this epic.
+
 ## Next Steps
 
 1. Draft initial workflow YAML for build/test

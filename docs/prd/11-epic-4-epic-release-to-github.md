@@ -22,6 +22,10 @@ we need to create an automated release of the VSCode extension in the appropriat
 - Users can download the release file from GitHub.
 - The downloaded extension is installable and functional in VSCode.
 
+## Dependencies
+
+- Depends on Epic 3: Automated Build and Deployment with GitHub Actions for foundational workflows.
+
 ## Priority
 
 - **High**

@@ -28,6 +28,9 @@ This epic focuses on integrating the [Run Gemini CLI GitHub Action](https://gith
 Medium
 
 ## Dependencies
+
+- Builds on workflows established in Epic 3: Automated Build and Deployment with GitHub Actions.
+- Operates independently of Epic 4: Release to GitHub but complements the overall CI/CD pipeline.
 - Existing CI/CD workflows.
 - Documentation updates.
 
