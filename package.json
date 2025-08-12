@@ -1,6 +1,7 @@
 {
   "name": "vscode-extension-autoloadx",
   "version": "0.0.2",
+  "type": "module",
   "description": "A VSCode extension for autoloading extensions",
   "repository": "https://github.com/thoroc/vscode-extension-autoloadX",
   "author": "Thomas Roche",
@@ -17,7 +18,7 @@
     "format:pkg": "prettier --write package.json",
     "lint": "eslint . --ext .ts,.js",
     "lint:docs": "markdownlint-cli2 '**/*.md'",
-    "lint:eslint": "eslint . --ext .ts,.js",
+    "lint:eslint": "eslint . --ext .ts,.js --config eslint.config.js",
     "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts registry.npmjs.org --allowed-schemes https:",
     "lint:unused": "knip --report summary",
     "package": "vsce package --out dist/",
@@ -27,6 +28,8 @@
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.2.1",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
