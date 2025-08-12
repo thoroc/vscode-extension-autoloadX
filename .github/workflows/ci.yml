@@ -32,10 +32,10 @@ jobs:
         run: npm run format:check
 
       - name: Detect unused files with Knip
-        run: npx knip
+        run: npm run knip
 
       - name: Run markdownlint-cli2
-        run: npx markdownlint-cli2 '**/*.md'
+        run: npm run lint:docs
 
       - name: Build extension
         run: npm run build --if-present

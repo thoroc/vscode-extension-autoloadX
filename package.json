@@ -18,7 +18,7 @@
     "format:docs": "npx prettier --write '**/*.md'",
     "format:pkg": "npx prettier --write package.json",
     "lint": "npx eslint . --ext .ts,.js",
-    "lint:docs": "npx markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
+    "lint:docs": "npx markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#.gitlab/**/*.md\"",
     "lint:eslint": "npx eslint . --ext .ts,.js --config eslint.config.js",
     "lint:lockfile": "npx lockfile-lint --path package-lock.json --allowed-hosts registry.npmjs.org --allowed-schemes https:",
     "knip": "npx knip --reporter compact",
