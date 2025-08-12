@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: packaged-extension
-          path: '*.vsix'
+          path: 'dist/*.vsix'
 
       - name: Run Gemini CLI
         uses: google-github-actions/run-gemini-cli@v0.1.10
