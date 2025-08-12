@@ -28,6 +28,12 @@ jobs:
       - name: Validate package.json formatting
         run: npm run format:pkg
 
+      - name: Run ESLint
+        run: npm run lint:eslint
+
+      - name: Run Prettier
+        run: npm run lint:prettier
+
       - name: Build extension
         run: npm run build --if-present
 

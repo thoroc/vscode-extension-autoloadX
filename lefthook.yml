@@ -1,15 +1,25 @@
 pre-commit:
-  parallel: true
   commands:
-    eslint:
-      run: 'npx eslint . --ext .ts,.js --fix'
-      glob: '*.{ts,js}'
-      stage: true
-    prettier:
-      run: 'npx prettier --write'
-      glob: '*.{ts,js,md}'
-      stage: true
-    markdownlint:
-      run: 'npx markdownlint-cli2 '**/*.md''
-      glob: '*.md'
-      stage: true
+    '1. lint-code':
+      glob: '*.{ts}'
+      interactive: true
+      run: 'npx eslint --fix {staged_files}'
+      stage_fixed: true
+    '2. format-code':
+      glob: '*.{ts,yml,yaml,json}'
+      interactive: true
+      run: 'npx nx format:write --files {staged_files}'
+      stage_fixed: true
+    '3. format-docs':
+      glob: '**/*.md,!**/.gitlab/merge_request_templates/*.md'
+      interactive: true
+      run: 'npx nx format:write --files {staged_files}'
+      stage_fixed: true
+    '4. lint-docs':
+      glob: '**/*.md,!**/.gitlab/merge_request_templates/*.md'
+      interactive: true
+      run: 'npx markdownlint-cli2 --fix {staged_files}'
+      stage_fixed: true
+    '5. lint-lockfile':
+      glob: 'package-lock.json'
+      run: 'npx lockfile-lint --validate-https --path'

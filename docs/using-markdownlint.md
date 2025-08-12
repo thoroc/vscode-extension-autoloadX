@@ -18,7 +18,7 @@ npm install
 To check for Markdown linting issues manually, run the following command:
 
 ```bash
-npx markdownlint-cli2 '**/*.md'
+npm run lint:docs
 ```
 
 ## Pre-commit Hook
