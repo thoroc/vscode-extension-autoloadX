@@ -12,9 +12,14 @@
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.2.1",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "jest": "^30.0.5",
+    "lefthook": "^1.12.3",
     "mkdirp": "^3.0.1",
     "mocha": "^11.7.1",
+    "prettier": "^3.6.2",
     "ts-jest": "^29.4.1",
     "typescript": "^5.9.2",
     "vsce": "^2.15.0",
@@ -23,6 +28,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "package": "vsce package --out dist/"
+    "package": "vsce package --out dist/",
+    "lint": "eslint . --ext .ts,.js",
+    "postinstall": "npx lefthook install"
   }
 }
