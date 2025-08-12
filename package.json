@@ -2,7 +2,7 @@
   "name": "vscode-extension-autoloadx",
   "publisher": "thoroc",
   "author": "Thomas Roche",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A VSCode extension for autoloading extensions",
   "repository": "https://github.com/thoroc/vscode-extension-autoloadX",
   "license": "MIT",
