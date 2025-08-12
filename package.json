@@ -18,7 +18,7 @@
     "lint": "eslint . --ext .ts,.js",
     "lint:docs": "markdownlint-cli2 '**/*.md'",
     "lint:eslint": "eslint . --ext .ts,.js",
-    "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts npmjs.com --allowed-schemes https",
+    "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts registry.npmjs.org --allowed-schemes https:",
     "lint:prettier": "prettier --check .",
     "lint:unused": "knip --report summary",
     "package": "vsce package --out dist/",
