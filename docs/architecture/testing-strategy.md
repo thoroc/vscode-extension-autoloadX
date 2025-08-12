@@ -1,7 +1,6 @@
 # Testing Strategy
 
-Our testing strategy follows the principles of the testing pyramid to ensure a fast, reliable, and maintainable
-codebase.
+Our testing strategy follows the principles of the testing pyramid to ensure a fast, reliable, and maintainable codebase.
 
 ## Testing Pyramid
 
@@ -17,15 +16,13 @@ Unit Tests (Core Logic)
 
 ## Test Organization
 
-All test files will be co-located with the source files they are testing (e.g., `recommendationEngine.test.ts` will be
-next to `recommendationEngine.ts`).
+All test files will be co-located with the source files they are testing (e.g., `recommendationEngine.test.ts` will be next to `recommendationEngine.ts`).
 
 ### Unit Tests
 
 - **Framework:** Jest
-- **Focus:** Testing individual services and functions in isolation, with their dependencies mocked. The primary focus
-  will be on the business logic within the `RecommendationEngine`.
-- \*\*Example (`recommendationEngine.test.ts`):
+- **Focus:** Testing individual services and functions in isolation, with their dependencies mocked. The primary focus will be on the business logic within the `RecommendationEngine` and the prioritized settings logic.
+- **Example (`recommendationEngine.test.ts`):**
 
   ```typescript
   it("should recommend enabling the Python extension for a Python project", () => {
@@ -39,14 +36,24 @@ next to `recommendationEngine.ts`).
       action: "enable",
     });
   });
+
+  it("should prioritize local repository settings over global settings", () => {
+    // Mock ConfigurationService to return conflicting settings
+    const mockConfigService = new MockConfigurationService({
+      local: { whitelist: ["local.extension"] },
+      global: { whitelist: ["global.extension"] },
+    });
+    const config = mockConfigService.getSettings();
+    expect(config.whitelist).toContain("local.extension");
+    expect(config.whitelist).not.toContain("global.extension");
+  });
   ```
 
 ### Integration Tests
 
 - **Framework:** `vscode-test` + Jest
-- **Focus:** Testing the services that interact directly with the VSCode API to ensure they behave correctly. These
-  tests run inside a real VSCode instance.
-- \*\*Example (`configurationService.test.ts`):
+- **Focus:** Testing the services that interact directly with the VSCode API to ensure they behave correctly. These tests run inside a real VSCode instance.
+- **Example (`configurationService.test.ts`):**
 
   ```typescript
   it("should correctly read the whitelist from the settings.json file", async () => {
@@ -56,14 +63,22 @@ next to `recommendationEngine.ts`).
     const whitelist = configService.getWhitelist();
     expect(whitelist).toEqual(["some.extension"]);
   });
+
+  it("should apply settings in the correct priority order", async () => {
+    // Mock settings in local repository, global, and extension directory
+    await setTestSetting("autoLoadX.whitelist", ["local.extension"], "local");
+    await setTestSetting("autoLoadX.whitelist", ["global.extension"], "global");
+    const configService = new ConfigurationService();
+    const whitelist = configService.getWhitelist();
+    expect(whitelist).toEqual(["local.extension"]);
+  });
   ```
 
 ### E2E Tests
 
 - **Framework:** `vscode-test` + Jest
-- **Focus:** Testing the entire workflow from start to finish, bypassing the UI prompt. These tests verify that the
-  correct side effects (enabling/disabling extensions) occur.
-- \*\*Example (`e2e.test.ts`):
+- **Focus:** Testing the entire workflow from start to finish, bypassing the UI prompt. These tests verify that the correct side effects (enabling/disabling extensions) occur.
+- **Example (`e2e.test.ts`):**
 
   ```typescript
   it("should enable the ESLint extension when a Node.js project is detected", async () => {
