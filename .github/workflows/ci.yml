@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   build-and-test:
@@ -42,3 +43,9 @@ jobs:
         with:
           name: packaged-extension
           path: "*.vsix"
+
+      - name: Run Gemini CLI
+        uses: google-github-actions/run-gemini-cli@v0.1.10
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          prompt: "You are a helpful assistant."
