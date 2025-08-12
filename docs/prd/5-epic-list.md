@@ -51,3 +51,6 @@
      - The action executes without errors and provides clear output logs.
      - Documentation is updated to include details about the new GitHub Action.
      - The integration is tested and verified.
+
+6. **Epic 6: Quality-of-Life Improvements for Contributors:** Enhance the development experience by implementing
+   githooks using lefthook for linting and formatting, ensuring code consistency and reducing errors.
