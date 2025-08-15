@@ -10,6 +10,22 @@ on:
       - 'created'
   workflow_dispatch:
     inputs:
+      issue_title:
+        description: 'Issue title for triage'
+        required: false
+        type: 'string'
+      issue_body:
+        description: 'Issue body for triage'
+        required: false
+        type: 'string'
+      issue_title:
+        description: 'Issue title for triage'
+        required: false
+        type: 'string'
+      issue_body:
+        description: 'Issue body for triage'
+        required: false
+        type: 'string'
       issue_number:
         description: 'issue number to triage'
         required: true
@@ -60,8 +76,8 @@ jobs:
         id: 'gemini_issue_triage'
         env:
           GITHUB_TOKEN: '${{ steps.generate_token.outputs.token || secrets.GITHUB_TOKEN }}'
-          ISSUE_TITLE: '${{ github.event.issue.title }}'
-          ISSUE_BODY: '${{ github.event.issue.body }}'
+          ISSUE_TITLE: '${{ github.event.issue.title || github.event.inputs.issue_title }}'
+          ISSUE_BODY: '${{ github.event.issue.body || github.event.inputs.issue_body }}'
           ISSUE_NUMBER: '${{ github.event.issue.number }}'
           REPOSITORY: '${{ github.repository }}'
         with:
