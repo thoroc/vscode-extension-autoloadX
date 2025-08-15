@@ -11,6 +11,12 @@ This project uses GitHub Actions for CI/CD. There are two main workflows:
 
 ## Gemini CLI Integration
 
+- **Merge Request Review**: The `gemini-pr-review.yml` workflow automates pull request reviews using the Gemini CLI.
+  - **Purpose**: Ensures code quality and adherence to project standards.
+  - **Setup**: Requires `GEMINI_API_KEY` and other secrets stored in GitHub Secrets.
+  - **Usage**: Automatically triggered on pull request events (e.g., opened, updated, reviewed).
+  - **Details**: See `.github/workflows/gemini-pr-review.yml` for configuration and steps.
+
 - **Gemini CLI Action**: The CI workflow now includes the
   [Run Gemini CLI GitHub Action](https://github.com/marketplace/actions/run-gemini-cli).
   - **Purpose**: Automates tasks like pull request reviews, issue triage, and code analysis.
