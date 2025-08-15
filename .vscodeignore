@@ -1,0 +1,18 @@
+# Exclude unnecessary files from the VSIX package
+node_modules
+.vscode
+*.log
+*.tsbuildinfo
+*.test.ts
+*.spec.ts
+coverage
+.vscode-test
+# Exclude unnecessary files from the VSIX package
+node_modules
+.vscode
+*.log
+*.tsbuildinfo
+*.test.ts
+*.spec.ts
+coverage
+.vscode-test
