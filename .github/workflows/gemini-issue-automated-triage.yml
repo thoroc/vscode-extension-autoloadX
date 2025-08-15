@@ -18,14 +18,6 @@ on:
         description: 'Issue body for triage'
         required: false
         type: 'string'
-      issue_title:
-        description: 'Issue title for triage'
-        required: false
-        type: 'string'
-      issue_body:
-        description: 'Issue body for triage'
-        required: false
-        type: 'string'
       issue_number:
         description: 'issue number to triage'
         required: true
