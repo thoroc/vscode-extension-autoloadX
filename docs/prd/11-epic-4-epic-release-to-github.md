@@ -17,6 +17,12 @@ we need to create an automated release of the VSCode extension in the appropriat
 
 ## Acceptance Criteria
 
+- Ensure the VSIX package includes only necessary files by adding a `.vscodeignore` file or specifying the `files`
+  property in `package.json`.
+- Review and exclude unnecessary files from the VSIX package, such as test files and non-essential configurations.
+- Optimize the package size while maintaining functionality.
+- Validate the optimized VSIX package to ensure it works as expected.
+
 - Successfully create a new release on GitHub when a new Git tag is detected.
 - The release includes the VSCode extension packaged in the correct format.
 - Users can download the release file from GitHub.

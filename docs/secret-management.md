@@ -9,7 +9,7 @@
 ## Referencing Secrets in Workflows
 
 - In workflow YAML files, reference secrets using `${{ secrets.SECRET_NAME }}`.
-- Example (from `.github/workflows/deploy.yml`):
+- Example (from `.github/workflows/release.yml`):
 
   ```yaml
   env:
