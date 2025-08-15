@@ -31,6 +31,8 @@
     "@types/node": "^24.2.1",
     "@typescript-eslint/eslint-plugin": "^8.39.1",
     "@typescript-eslint/parser": "^8.39.1",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.6.0",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
@@ -44,7 +46,6 @@
     "prettier-plugin-pkg": "^0.21.2",
     "ts-jest": "^29.4.1",
     "typescript": "^5.9.2",
-    "vsce": "^2.15.0",
     "vscode": "^1.1.37"
   }
 }
