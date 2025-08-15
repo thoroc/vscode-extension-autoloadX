@@ -1,7 +1,7 @@
 coverage/
 dist/
 !.github/workflows/ci.yml
-!.github/workflows/deploy.yml
+!.github/workflows/release.yml
 !.github/workflows/gemini-issue-automated-triage.yml
 !.github/workflows/gemini-pr-review.yml
 !.github/labels.yml
