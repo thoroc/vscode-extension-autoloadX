@@ -31,5 +31,12 @@
     "ux-expert": {
       "prompt": "{file:./.bmad-core/agents/ux-expert.md}"
     }
+  },
+  "mcp": {
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp"],
+      "enabled": true
+    }
   }
 }
