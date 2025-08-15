@@ -46,6 +46,6 @@
     "prettier-plugin-pkg": "^0.21.2",
     "ts-jest": "^29.4.1",
     "typescript": "^5.9.2",
-    "vscode": "^1.1.37"
+    "vscode": "^1.1.34"
   }
 }
