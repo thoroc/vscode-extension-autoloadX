@@ -22,7 +22,8 @@ project.
 - [ ] All epics are documented and aligned with the project goals.
 - [ ] User stories are complete, actionable, and testable.
 - [ ] Acceptance criteria for each story are clear and measurable.
-- [ ] Stories are prioritized based on business value and dependencies.
+- [ ] Stories are prioritized based on business value and dependencies, and validated for alignment with foundational
+      workflows.
 
 ### Stakeholder Alignment
 

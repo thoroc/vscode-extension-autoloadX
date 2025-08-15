@@ -18,7 +18,7 @@ we need to create an automated release of the VSCode extension in the appropriat
 ## Acceptance Criteria
 
 - Ensure the VSIX package includes only necessary files by adding a `.vscodeignore` file or specifying the `files`
-  property in `package.json`.
+  property in `package.json`, and validate its effectiveness during testing.
 - Review and exclude unnecessary files from the VSIX package, such as test files and non-essential configurations.
 - Optimize the package size while maintaining functionality.
 - Validate the optimized VSIX package to ensure it works as expected.
