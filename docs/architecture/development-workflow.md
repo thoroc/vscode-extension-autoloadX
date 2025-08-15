@@ -74,6 +74,32 @@ test/
 npm run package
 ```
 
+## Automated Issue Triage Workflow
+
+### Overview
+
+The Gemini Automated Issue Triage workflow streamlines issue management by automatically labeling and prioritizing new
+issues based on predefined criteria.
+
+### Configuration
+
+- **Workflow File**: `.github/workflows/gemini-issue-automated-triage.yml`
+- **Labels Configuration**: `.github/labels.yml`
+
+### Key Features
+
+1. Automatically labels issues as `kind/*` (e.g., bug, enhancement) and `priority/*` (e.g., p0, p1).
+2. Removes the `status/needs-triage` label after triaging.
+3. Notifies team members in case of failures.
+
+### Testing
+
+To test the workflow:
+
+```bash
+gh workflow run gemini-issue-automated-triage.yml --field issue_number=<number> --field issue_title='<title>' --field issue_body='<body>'
+```
+
 ## Environment Configuration
 
 There are no environment variables required for this extension. All configuration is handled through the `package.json`
