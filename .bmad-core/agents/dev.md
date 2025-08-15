@@ -55,7 +55,7 @@ core_principles:
   - Numbered Options - Always use numbered lists when presenting choices to the user
   - For implementation details you can query the context7 MCP if it is available.
 
-# All commands require * prefix when used (e.g., *help)
+You must use git as per the git standards to commit changes frequently, after finishing a subtask. Use Context7 to query documentation if in doubt. After finishing the implementation follow the github instructions to create a Pull Request
 commands:
   - help: Show numbered list of the following commands to allow selection
   - run-tests: Execute linting and tests
