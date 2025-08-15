@@ -34,4 +34,5 @@ The project will require a comprehensive testing strategy including both **Unit 
     post-MVP feature.
 - **Key Risks for Investigation:**
   - **VSCode Profiles Conflict:** There is a risk of conflicting behavior with VSCode's built-in \"Profiles\" feature.
-    The interaction between AutoLoadX and Profiles must be investigated during the initial technical spike.
+    The interaction between AutoLoadX and Profiles must be investigated and documented during the initial technical
+    spike.
