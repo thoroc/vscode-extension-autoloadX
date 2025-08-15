@@ -1,7 +1,3 @@
 coverage/
 dist/
-.bmad-core/
-.gemini/
-.opencode/
-.claude/
 node_modules/

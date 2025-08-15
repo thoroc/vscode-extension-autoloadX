@@ -1,22 +1,25 @@
 {
+  "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint/refs/heads/main/schema/markdownlint-config-schema.json",
   "default": true,
   "MD001": true,
   "MD007": false,
   "MD013": {
     "code_blocks": false,
     "tables": false,
-    "line_length": 120
+    "line_length": 140,
+    "heading_line_length": 140
   },
   "MD024": false,
   "MD029": false,
   "MD030": false,
   "MD033": {
-    "allowed_elements": ["br", "abbr", "nobr", "details", "summary", "a", "img"]
+    "allowed_elements": ["br", "abbr", "nobr", "details", "summary", "a", "img", "ins"]
   },
+  "MD036": false,
   "MD046": {
     "style": "fenced"
   },
   "MD049": {
-    "emphasis": "underscore"
+    "style": "underscore"
   }
 }
