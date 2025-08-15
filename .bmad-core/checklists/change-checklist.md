@@ -1,8 +1,10 @@
 # Change Navigation Checklist
 
-**Purpose:** To systematically guide the selected Agent and user through the analysis and planning required when a significant change (pivot, tech issue, missing requirement, failed story) is identified during the BMad workflow.
+**Purpose:** To systematically guide the selected Agent and user through the analysis and planning required when a
+significant change (pivot, tech issue, missing requirement, failed story) is identified during the BMad workflow.
 
-**Instructions:** Review each item with the user. Mark `[x]` for completed/confirmed, `[N/A]` if not applicable, or add notes for discussion points.
+**Instructions:** Review each item with the user. Mark `[x]` for completed/confirmed, `[N/A]` if not applicable, or add
+notes for discussion points.
 
 [[LLM: INITIALIZATION INSTRUCTIONS - CHANGE NAVIGATION
 
@@ -22,8 +24,8 @@ Required context:
 - Access to PRD, architecture, and other key documents
 - Understanding of remaining work planned
 
-APPROACH:
-This is an interactive process with the user. Work through each section together, discussing implications and options. The user makes final decisions, but provide expert guidance on technical feasibility and impact.
+APPROACH: This is an interactive process with the user. Work through each section together, discussing implications and
+options. The user makes final decisions, but provide expert guidance on technical feasibility and impact.
 
 REMEMBER: Changes are opportunities to improve, not failures. Handle them professionally and constructively.]]
 
@@ -47,8 +49,10 @@ Be specific and factual, not blame-oriented.]]
   - [ ] Is it a fundamental misunderstanding of existing requirements?
   - [ ] Is it a necessary pivot based on feedback or new information?
   - [ ] Is it a failed/abandoned story needing a new approach?
-- [ ] **Assess Initial Impact:** Describe the immediate observed consequences (e.g., blocked progress, incorrect functionality, non-viable tech).
-- [ ] **Gather Evidence:** Note any specific logs, error messages, user feedback, or analysis that supports the issue definition.
+- [ ] **Assess Initial Impact:** Describe the immediate observed consequences (e.g., blocked progress, incorrect
+      functionality, non-viable tech).
+- [ ] **Gather Evidence:** Note any specific logs, error messages, user feedback, or analysis that supports the issue
+      definition.
 
 ## 2. Epic Impact Assessment
 
@@ -127,7 +131,8 @@ Be honest about trade-offs. There's rarely a perfect solution.]]
   - [ ] Does the MVP scope need reduction (removing features/epics)?
   - [ ] Do the core MVP goals need modification?
   - [ ] Are alternative approaches needed to meet the original MVP intent?
-  - [ ] **Extreme Case:** Does the issue necessitate a fundamental replan or potentially a new PRD V2 (to be handled by PM)?
+  - [ ] **Extreme Case:** Does the issue necessitate a fundamental replan or potentially a new PRD V2 (to be handled by
+        PM)?
 - [ ] **Select Recommended Path:** Based on the evaluation, agree on the most viable path forward.
 
 ## 5. Sprint Change Proposal Components
@@ -164,8 +169,7 @@ This proposal guides all subsequent work.]]
 
 Get explicit approval - implicit agreement causes problems.
 
-FINAL REPORT:
-After completing the checklist, provide a concise summary:
+FINAL REPORT: After completing the checklist, provide a concise summary:
 
 - What changed and why
 - What we're doing about it

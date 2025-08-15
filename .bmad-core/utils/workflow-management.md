@@ -4,7 +4,8 @@ Enables BMad orchestrator to manage and execute team workflows.
 
 ## Dynamic Workflow Loading
 
-Read available workflows from current team configuration's `workflows` field. Each team bundle defines its own supported workflows.
+Read available workflows from current team configuration's `workflows` field. Each team bundle defines its own supported
+workflows.
 
 **Key Commands**:
 

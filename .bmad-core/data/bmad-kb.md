@@ -2,7 +2,9 @@
 
 ## Overview
 
-BMad-Method (Breakthrough Method of Agile AI-driven Development) is a framework that combines AI agents with Agile development methodologies. The v4 system introduces a modular architecture with improved dependency management, bundle optimization, and support for both web and IDE environments.
+BMad-Method (Breakthrough Method of Agile AI-driven Development) is a framework that combines AI agents with Agile
+development methodologies. The v4 system introduces a modular architecture with improved dependency management, bundle
+optimization, and support for both web and IDE environments.
 
 ### Key Features
 
@@ -24,7 +26,8 @@ BMad-Method (Breakthrough Method of Agile AI-driven Development) is a framework 
 
 ### The Core Method
 
-BMad transforms you into a "Vibe CEO" - directing a team of specialized AI agents through structured workflows. Here's how:
+BMad transforms you into a "Vibe CEO" - directing a team of specialized AI agents through structured workflows. Here's
+how:
 
 1. **You Direct, AI Executes**: You provide vision and decisions; agents handle implementation details
 2. **Specialized Agents**: Each agent masters one role (PM, Developer, Architect, etc.)
@@ -77,7 +80,8 @@ BMad transforms you into a "Vibe CEO" - directing a team of specialized AI agent
 1. Navigate to `dist/teams/`
 2. Copy `team-fullstack.txt` content
 3. Create new Gemini Gem or CustomGPT
-4. Upload file with instructions: "Your critical operating instructions are attached, do not break character as directed"
+4. Upload file with instructions: "Your critical operating instructions are attached, do not break character as
+   directed"
 5. Type `/help` to see available commands
 
 #### Option 2: IDE Integration
@@ -101,7 +105,9 @@ npx bmad-method install
   - **Roo Code**: Web-based IDE with agent support
   - **GitHub Copilot**: VS Code extension with AI peer programming assistant
 
-**Note for VS Code Users**: BMad-Method assumes when you mention "VS Code" that you're using it with an AI-powered extension like GitHub Copilot, Cline, or Roo. Standard VS Code without AI capabilities cannot run BMad agents. The installer includes built-in support for Cline and Roo.
+**Note for VS Code Users**: BMad-Method assumes when you mention "VS Code" that you're using it with an AI-powered
+extension like GitHub Copilot, Cline, or Roo. Standard VS Code without AI capabilities cannot run BMad agents. The
+installer includes built-in support for Cline and Roo.
 
 **Verify Installation**:
 
@@ -109,7 +115,8 @@ npx bmad-method install
 - IDE-specific integration files created
 - All agent commands/rules/modes available
 
-**Remember**: At its core, BMad-Method is about mastering and harnessing prompt engineering. Any IDE with AI agent support can use BMad - the framework provides the structured prompts and workflows that make AI development effective
+**Remember**: At its core, BMad-Method is about mastering and harnessing prompt engineering. Any IDE with AI agent
+support can use BMad - the framework provides the structured prompts and workflows that make AI development effective
 
 ### Environment Selection Guide
 
@@ -127,7 +134,8 @@ npx bmad-method install
 - Document sharding and story management
 - Implementation workflow (SM/Dev cycles)
 
-**Cost-Saving Tip**: Create large documents (PRDs, architecture) in web UI, then copy to `docs/prd.md` and `docs/architecture.md` in your project before switching to IDE for development.
+**Cost-Saving Tip**: Create large documents (PRDs, architecture) in web UI, then copy to `docs/prd.md` and
+`docs/architecture.md` in your project before switching to IDE for development.
 
 ### IDE-Only Workflow Considerations
 
@@ -156,7 +164,8 @@ npx bmad-method install
 **About bmad-master and bmad-orchestrator**:
 
 - **bmad-master**: CAN do any task without switching agents, BUT...
-- **Still use specialized agents for planning**: PM, Architect, and UX Expert have tuned personas that produce better results
+- **Still use specialized agents for planning**: PM, Architect, and UX Expert have tuned personas that produce better
+  results
 - **Why specialization matters**: Each agent's personality and focus creates higher quality outputs
 - **If using bmad-master/orchestrator**: Fine for planning phases, but...
 
@@ -178,11 +187,13 @@ npx bmad-method install
 
 ## Core Configuration (core-config.yaml)
 
-**New in V4**: The `bmad-core/core-config.yaml` file is a critical innovation that enables BMad to work seamlessly with any project structure, providing maximum flexibility and backwards compatibility.
+**New in V4**: The `bmad-core/core-config.yaml` file is a critical innovation that enables BMad to work seamlessly with
+any project structure, providing maximum flexibility and backwards compatibility.
 
 ### What is core-config.yaml?
 
-This configuration file acts as a map for BMad agents, telling them exactly where to find your project documents and how they're structured. It enables:
+This configuration file acts as a map for BMad agents, telling them exactly where to find your project documents and how
+they're structured. It enables:
 
 - **Version Flexibility**: Work with V3, V4, or custom document structures
 - **Custom Locations**: Define where your documents and shards live
@@ -243,7 +254,8 @@ architectureShardedLocation: docs/architecture
 
 ### Vibe CEO'ing
 
-You are the "Vibe CEO" - thinking like a CEO with unlimited resources and a singular vision. Your AI agents are your high-powered team, and your role is to:
+You are the "Vibe CEO" - thinking like a CEO with unlimited resources and a singular vision. Your AI agents are your
+high-powered team, and your role is to:
 
 - **Direct**: Provide clear instructions and objectives
 - **Refine**: Iterate on outputs to achieve quality
@@ -301,7 +313,8 @@ You are the "Vibe CEO" - thinking like a CEO with unlimited resources and a sing
 - **Windsurf**: `@agent-name` (e.g., `@bmad-master`)
 - **Trae**: `@agent-name` (e.g., `@bmad-master`)
 - **Roo Code**: Select mode from mode selector (e.g., `bmad-master`)
-- **GitHub Copilot**: Open the Chat view (`⌃⌘I` on Mac, `Ctrl+Alt+I` on Windows/Linux) and select **Agent** from the chat mode selector.
+- **GitHub Copilot**: Open the Chat view (`⌃⌘I` on Mac, `Ctrl+Alt+I` on Windows/Linux) and select **Agent** from the
+  chat mode selector.
 
 **Chat Management Guidelines**:
 
@@ -353,7 +366,9 @@ You are the "Vibe CEO" - thinking like a CEO with unlimited resources and a sing
 
 ### System Overview
 
-The BMad-Method is built around a modular architecture centered on the `bmad-core` directory, which serves as the brain of the entire system. This design enables the framework to operate effectively in both IDE environments (like Cursor, VS Code) and web-based AI interfaces (like ChatGPT, Gemini).
+The BMad-Method is built around a modular architecture centered on the `bmad-core` directory, which serves as the brain
+of the entire system. This design enables the framework to operate effectively in both IDE environments (like Cursor, VS
+Code) and web-based AI interfaces (like ChatGPT, Gemini).
 
 ### Key Architectural Components
 
@@ -394,8 +409,10 @@ The BMad-Method is built around a modular architecture centered on the `bmad-cor
 
 #### Web UI Environment
 
-- Uses pre-built bundles from `dist/teams` for stand alone 1 upload files for all agents and their assets with an orchestrating agent
-- Single text files containing all agent dependencies are in `dist/agents/` - these are unnecessary unless you want to create a web agent that is only a single agent and not a team
+- Uses pre-built bundles from `dist/teams` for stand alone 1 upload files for all agents and their assets with an
+  orchestrating agent
+- Single text files containing all agent dependencies are in `dist/agents/` - these are unnecessary unless you want to
+  create a web agent that is only a single agent and not a team
 - Created by the web-builder tool for upload to web interfaces
 - Provides complete context in one package
 
@@ -403,9 +420,12 @@ The BMad-Method is built around a modular architecture centered on the `bmad-cor
 
 BMad employs a sophisticated template system with three key components:
 
-1. **Template Format** (`utils/bmad-doc-template.md`): Defines markup language for variable substitution and AI processing directives from yaml templates
-2. **Document Creation** (`tasks/create-doc.md`): Orchestrates template selection and user interaction to transform yaml spec to final markdown output
-3. **Advanced Elicitation** (`tasks/advanced-elicitation.md`): Provides interactive refinement through structured brainstorming
+1. **Template Format** (`utils/bmad-doc-template.md`): Defines markup language for variable substitution and AI
+   processing directives from yaml templates
+2. **Document Creation** (`tasks/create-doc.md`): Orchestrates template selection and user interaction to transform yaml
+   spec to final markdown output
+3. **Advanced Elicitation** (`tasks/advanced-elicitation.md`): Provides interactive refinement through structured
+   brainstorming
 
 ### Technical Preferences Integration
 
@@ -425,7 +445,8 @@ The `web-builder.js` tool creates web-ready bundles by:
 3. Concatenating content into single text files with clear separators
 4. Outputting ready-to-upload bundles for web AI interfaces
 
-This architecture enables seamless operation across environments while maintaining the rich, interconnected agent ecosystem that makes BMad powerful.
+This architecture enables seamless operation across environments while maintaining the rich, interconnected agent
+ecosystem that makes BMad powerful.
 
 ## Complete Development Workflow
 
@@ -478,9 +499,8 @@ that can handle [specific requirements]."
 
 1. **Document Sharding** (CRITICAL STEP):
    - Documents created by PM/Architect (in Web or IDE) MUST be sharded for development
-   - Two methods to shard:
-     a) **Manual**: Drag `shard-doc` task + document file into chat
-     b) **Agent**: Ask `@bmad-master` or `@po` to shard documents
+   - Two methods to shard: a) **Manual**: Drag `shard-doc` task + document file into chat b) **Agent**: Ask
+     `@bmad-master` or `@po` to shard documents
    - Shards `docs/prd.md` → `docs/prd/` folder
    - Shards `docs/architecture.md` → `docs/architecture/` folder
    - **WARNING**: Do NOT shard in Web UI - copying many small files is painful!
@@ -549,7 +569,8 @@ Each status change requires user verification and approval before proceeding.
 
 #### Brownfield Enhancement (Existing Projects)
 
-**Key Concept**: Brownfield development requires comprehensive documentation of your existing project for AI agents to understand context, patterns, and constraints.
+**Key Concept**: Brownfield development requires comprehensive documentation of your existing project for AI agents to
+understand context, patterns, and constraints.
 
 **Complete Brownfield Workflow Options**:
 
@@ -740,7 +761,8 @@ For full details, see `CONTRIBUTING.md`. Key points:
 
 ### What Are Expansion Packs?
 
-Expansion packs extend BMad-Method beyond traditional software development into ANY domain. They provide specialized agent teams, templates, and workflows while keeping the core framework lean and focused on development.
+Expansion packs extend BMad-Method beyond traditional software development into ANY domain. They provide specialized
+agent teams, templates, and workflows while keeping the core framework lean and focused on development.
 
 ### Why Use Expansion Packs?
 

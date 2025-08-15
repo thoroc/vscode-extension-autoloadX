@@ -1,11 +1,12 @@
 # Product Owner (PO) Master Validation Checklist
 
-This checklist serves as a comprehensive framework for the Product Owner to validate project plans before development execution. It adapts intelligently based on project type (greenfield vs brownfield) and includes UI/UX considerations when applicable.
+This checklist serves as a comprehensive framework for the Product Owner to validate project plans before development
+execution. It adapts intelligently based on project type (greenfield vs brownfield) and includes UI/UX considerations
+when applicable.
 
 [[LLM: INITIALIZATION INSTRUCTIONS - PO MASTER CHECKLIST
 
-PROJECT TYPE DETECTION:
-First, determine the project type by checking:
+PROJECT TYPE DETECTION: First, determine the project type by checking:
 
 1. Is this a GREENFIELD project (new from scratch)?
    - Look for: New project initialization, no existing codebase references
@@ -19,8 +20,7 @@ First, determine the project type by checking:
    - Check for: frontend-architecture.md, UI/UX specifications, design files
    - Look for: Frontend stories, component specifications, user interface mentions
 
-DOCUMENT REQUIREMENTS:
-Based on project type, ensure you have access to:
+DOCUMENT REQUIREMENTS: Based on project type, ensure you have access to:
 
 For GREENFIELD projects:
 
@@ -51,15 +51,15 @@ VALIDATION APPROACH:
 3. Critical Thinking - Question assumptions and identify gaps
 4. Risk Assessment - Consider what could go wrong with each decision
 
-EXECUTION MODE:
-Ask the user if they want to work through the checklist:
+EXECUTION MODE: Ask the user if they want to work through the checklist:
 
 - Section by section (interactive mode) - Review each section, get confirmation before proceeding
 - All at once (comprehensive mode) - Complete full analysis and present report at end]]
 
 ## 1. PROJECT SETUP & INITIALIZATION
 
-[[LLM: Project setup is the foundation. For greenfield, ensure clean start. For brownfield, ensure safe integration with existing system. Verify setup matches project type.]]
+[[LLM: Project setup is the foundation. For greenfield, ensure clean start. For brownfield, ensure safe integration with existing system.
+Verify setup matches project type.]]
 
 ### 1.1 Project Scaffolding [[GREENFIELD ONLY]]
 

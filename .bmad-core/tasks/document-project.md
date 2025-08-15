@@ -2,13 +2,16 @@
 
 ## Purpose
 
-Generate comprehensive documentation for existing projects optimized for AI development agents. This task creates structured reference materials that enable AI agents to understand project context, conventions, and patterns for effective contribution to any codebase.
+Generate comprehensive documentation for existing projects optimized for AI development agents. This task creates
+structured reference materials that enable AI agents to understand project context, conventions, and patterns for
+effective contribution to any codebase.
 
 ## Task Instructions
 
 ### 1. Initial Project Analysis
 
-**CRITICAL:** First, check if a PRD or requirements document exists in context. If yes, use it to focus your documentation efforts on relevant areas only.
+**CRITICAL:** First, check if a PRD or requirements document exists in context. If yes, use it to focus your
+documentation efforts on relevant areas only.
 
 **IF PRD EXISTS**:
 
@@ -17,12 +20,13 @@ Generate comprehensive documentation for existing projects optimized for AI deve
 - Focus documentation ONLY on these relevant areas
 - Skip unrelated parts of the codebase to keep docs lean
 
-**IF NO PRD EXISTS**:
-Ask the user:
+**IF NO PRD EXISTS**: Ask the user:
 
-"I notice you haven't provided a PRD or requirements document. To create more focused and useful documentation, I recommend one of these options:
+"I notice you haven't provided a PRD or requirements document. To create more focused and useful documentation, I
+recommend one of these options:
 
-1. **Create a PRD first** - Would you like me to help create a brownfield PRD before documenting? This helps focus documentation on relevant areas.
+1. **Create a PRD first** - Would you like me to help create a brownfield PRD before documenting? This helps focus
+   documentation on relevant areas.
 
 2. **Provide existing requirements** - Do you have a requirements document, epic, or feature description you can share?
 
@@ -31,7 +35,8 @@ Ask the user:
    - 'Refactoring the authentication module'
    - 'Integrating with a new third-party API'
 
-4. **Document everything** - Or should I proceed with comprehensive documentation of the entire codebase? (Note: This may create excessive documentation for large projects)
+4. **Document everything** - Or should I proceed with comprehensive documentation of the entire codebase? (Note: This
+   may create excessive documentation for large projects)
 
 Please let me know your preference, or I can proceed with full documentation if you prefer."
 
@@ -42,17 +47,21 @@ Based on their response:
 
 Begin by conducting analysis of the existing project. Use available tools to:
 
-1. **Project Structure Discovery**: Examine the root directory structure, identify main folders, and understand the overall organization
-2. **Technology Stack Identification**: Look for package.json, requirements.txt, Cargo.toml, pom.xml, etc. to identify languages, frameworks, and dependencies
+1. **Project Structure Discovery**: Examine the root directory structure, identify main folders, and understand the
+   overall organization
+2. **Technology Stack Identification**: Look for package.json, requirements.txt, Cargo.toml, pom.xml, etc. to identify
+   languages, frameworks, and dependencies
 3. **Build System Analysis**: Find build scripts, CI/CD configurations, and development commands
 4. **Existing Documentation Review**: Check for README files, docs folders, and any existing documentation
-5. **Code Pattern Analysis**: Sample key files to understand coding patterns, naming conventions, and architectural approaches
+5. **Code Pattern Analysis**: Sample key files to understand coding patterns, naming conventions, and architectural
+   approaches
 
 Ask the user these elicitation questions to better understand their needs:
 
 - What is the primary purpose of this project?
 - Are there any specific areas of the codebase that are particularly complex or important for agents to understand?
-- What types of tasks do you expect AI agents to perform on this project? (e.g., bug fixes, feature additions, refactoring, testing)
+- What types of tasks do you expect AI agents to perform on this project? (e.g., bug fixes, feature additions,
+  refactoring, testing)
 - Are there any existing documentation standards or formats you prefer?
 - What level of technical detail should the documentation target? (junior developers, senior developers, mixed team)
 - Is there a specific feature or enhancement you're planning? (This helps focus documentation)
@@ -98,26 +107,27 @@ CRITICAL: Before generating documentation, conduct extensive analysis of the exi
 
 **Document Structure**:
 
-# [Project Name] Brownfield Architecture Document
+## [Project Name] Brownfield Architecture Document
 
-## Introduction
+### Introduction
 
-This document captures the CURRENT STATE of the [Project Name] codebase, including technical debt, workarounds, and real-world patterns. It serves as a reference for AI agents working on enhancements.
+This document captures the CURRENT STATE of the [Project Name] codebase, including technical debt, workarounds, and
+real-world patterns. It serves as a reference for AI agents working on enhancements.
 
-### Document Scope
+#### Document Scope
 
-[If PRD provided: "Focused on areas relevant to: {enhancement description}"]
-[If no PRD: "Comprehensive documentation of entire system"]
+[If PRD provided: "Focused on areas relevant to: {enhancement description}"] [If no PRD: "Comprehensive documentation of
+entire system"]
 
-### Change Log
+#### Change Log
 
 | Date   | Version | Description                 | Author    |
 | ------ | ------- | --------------------------- | --------- |
 | [Date] | 1.0     | Initial brownfield analysis | [Analyst] |
 
-## Quick Reference - Key Files and Entry Points
+### Quick Reference - Key Files and Entry Points
 
-### Critical Files for Understanding the System
+#### Critical Files for Understanding the System
 
 - **Main Entry**: `src/index.js` (or actual entry point)
 - **Configuration**: `config/app.config.js`, `.env.example`
@@ -126,15 +136,15 @@ This document captures the CURRENT STATE of the [Project Name] codebase, includi
 - **Database Models**: `src/models/` or link to schema files
 - **Key Algorithms**: [List specific files with complex logic]
 
-### If PRD Provided - Enhancement Impact Areas
+#### If PRD Provided - Enhancement Impact Areas
 
 [Highlight which files/modules will be affected by the planned enhancement]
 
-## High Level Architecture
+### High Level Architecture
 
-### Technical Summary
+#### Technical Summary
 
-### Actual Tech Stack (from package.json/requirements.txt)
+#### Actual Tech Stack (from package.json/requirements.txt)
 
 | Category  | Technology | Version | Notes                      |
 | --------- | ---------- | ------- | -------------------------- |
@@ -144,15 +154,15 @@ This document captures the CURRENT STATE of the [Project Name] codebase, includi
 
 etc...
 
-### Repository Structure Reality Check
+#### Repository Structure Reality Check
 
 - Type: [Monorepo/Polyrepo/Hybrid]
 - Package Manager: [npm/yarn/pnpm]
 - Notable: [Any unusual structure decisions]
 
-## Source Tree and Module Organization
+### Source Tree and Module Organization
 
-### Project Structure (Actual)
+#### Project Structure (Actual)
 
 ```text
 project-root/
@@ -167,16 +177,16 @@ project-root/
 └── config/              # Environment configs
 ```
 
-### Key Modules and Their Purpose
+#### Key Modules and Their Purpose
 
 - **User Management**: `src/services/userService.js` - Handles all user operations
 - **Authentication**: `src/middleware/auth.js` - JWT-based, custom implementation
 - **Payment Processing**: `src/legacy/payment.js` - CRITICAL: Do not refactor, tightly coupled
 - **[List other key modules with their actual files]**
 
-## Data Models and APIs
+### Data Models and APIs
 
-### Data Models
+#### Data Models
 
 Instead of duplicating, reference actual model files:
 
@@ -184,30 +194,30 @@ Instead of duplicating, reference actual model files:
 - **Order Model**: See `src/models/Order.js`
 - **Related Types**: TypeScript definitions in `src/types/`
 
-### API Specifications
+#### API Specifications
 
 - **OpenAPI Spec**: `docs/api/openapi.yaml` (if exists)
 - **Postman Collection**: `docs/api/postman-collection.json`
 - **Manual Endpoints**: [List any undocumented endpoints discovered]
 
-## Technical Debt and Known Issues
+### Technical Debt and Known Issues
 
-### Critical Technical Debt
+#### Critical Technical Debt
 
 1. **Payment Service**: Legacy code in `src/legacy/payment.js` - tightly coupled, no tests
 2. **User Service**: Different pattern than other services, uses callbacks instead of promises
 3. **Database Migrations**: Manually tracked, no proper migration tool
 4. **[Other significant debt]**
 
-### Workarounds and Gotchas
+#### Workarounds and Gotchas
 
 - **Environment Variables**: Must set `NODE_ENV=production` even for staging (historical reason)
 - **Database Connections**: Connection pool hardcoded to 10, changing breaks payment service
 - **[Other workarounds developers need to know]**
 
-## Integration Points and External Dependencies
+### Integration Points and External Dependencies
 
-### External Services
+#### External Services
 
 | Service  | Purpose  | Integration Type | Key Files                      |
 | -------- | -------- | ---------------- | ------------------------------ |
@@ -216,45 +226,45 @@ Instead of duplicating, reference actual model files:
 
 etc...
 
-### Internal Integration Points
+#### Internal Integration Points
 
 - **Frontend Communication**: REST API on port 3000, expects specific headers
 - **Background Jobs**: Redis queue, see `src/workers/`
 - **[Other integrations]**
 
-## Development and Deployment
+### Development and Deployment
 
-### Local Development Setup
+#### Local Development Setup
 
 1. Actual steps that work (not ideal steps)
 2. Known issues with setup
 3. Required environment variables (see `.env.example`)
 
-### Build and Deployment Process
+#### Build and Deployment Process
 
 - **Build Command**: `npm run build` (webpack config in `webpack.config.js`)
 - **Deployment**: Manual deployment via `scripts/deploy.sh`
 - **Environments**: Dev, Staging, Prod (see `config/environments/`)
 
-## Testing Reality
+### Testing Reality
 
-### Current Test Coverage
+#### Current Test Coverage
 
 - Unit Tests: 60% coverage (Jest)
 - Integration Tests: Minimal, in `tests/integration/`
 - E2E Tests: None
 - Manual Testing: Primary QA method
 
-### Running Tests
+#### Running Tests
 
 ```bash
 npm test           # Runs unit tests
 npm run test:integration  # Runs integration tests (requires local DB)
 ```
 
-## If Enhancement PRD Provided - Impact Analysis
+### If Enhancement PRD Provided - Impact Analysis
 
-### Files That Will Need Modification
+#### Files That Will Need Modification
 
 Based on the enhancement requirements, these files will be affected:
 
@@ -263,21 +273,21 @@ Based on the enhancement requirements, these files will be affected:
 - `src/routes/userRoutes.js` - New endpoints
 - [etc...]
 
-### New Files/Modules Needed
+#### New Files/Modules Needed
 
 - `src/services/newFeatureService.js` - New business logic
 - `src/models/NewFeature.js` - New data model
 - [etc...]
 
-### Integration Considerations
+#### Integration Considerations
 
 - Will need to integrate with existing auth middleware
 - Must follow existing response format in `src/utils/responseFormatter.js`
 - [Other integration points]
 
-## Appendix - Useful Commands and Scripts
+### Appendix - Useful Commands and Scripts
 
-### Frequently Used Commands
+#### Frequently Used Commands
 
 ```bash
 npm run dev         # Start development server
@@ -286,13 +296,13 @@ npm run migrate     # Run database migrations
 npm run seed        # Seed test data
 ```
 
-### Debugging and Troubleshooting
+#### Debugging and Troubleshooting
 
 - **Logs**: Check `logs/app.log` for application logs
 - **Debug Mode**: Set `DEBUG=app:*` for verbose logging
 - **Common Issues**: See `docs/troubleshooting.md`]]
 
-### 4. Document Delivery
+#### 4. Document Delivery
 
 1. **In Web UI (Gemini, ChatGPT, Claude)**:
    - Present the entire document in one response (or multiple if too long)
@@ -312,7 +322,7 @@ The document should be comprehensive enough that future agents can understand:
 - What constraints must be respected
 - If PRD provided: What needs to change for the enhancement]]
 
-### 5. Quality Assurance
+#### 5. Quality Assurance
 
 CRITICAL: Before finalizing the document:
 
@@ -324,7 +334,7 @@ CRITICAL: Before finalizing the document:
 
 Apply the advanced elicitation task after major sections to refine based on user feedback.
 
-## Success Criteria
+### Success Criteria
 
 - Single comprehensive brownfield architecture document created
 - Document reflects REALITY including technical debt and workarounds
@@ -334,7 +344,7 @@ Apply the advanced elicitation task after major sections to refine based on user
 - Document enables AI agents to navigate and understand the actual codebase
 - Technical constraints and "gotchas" are clearly documented
 
-## Notes
+### Notes
 
 - This task creates ONE document that captures the TRUE state of the system
 - References actual files rather than duplicating content when possible

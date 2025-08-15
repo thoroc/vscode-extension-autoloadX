@@ -4,15 +4,24 @@ This guide will help you understand and effectively use the BMad Method for agil
 
 ## The BMad Plan and Execute Workflow
 
-First, here is the full standard Greenfield Planning + Execution Workflow. Brownfield is very similar, but it's suggested to understand this greenfield first, even if on a simple project before tackling a brownfield project. The BMad Method needs to be installed to the root of your new project folder. For the planning phase, you can optionally perform it with powerful web agents, potentially resulting in higher quality results at a fraction of the cost it would take to complete if providing your own API key or credits in some Agentic tools. For planning, powerful thinking models and larger context - along with working as a partner with the agents will net the best results.
+First, here is the full standard Greenfield Planning + Execution Workflow. Brownfield is very similar, but it's
+suggested to understand this greenfield first, even if on a simple project before tackling a brownfield project. The
+BMad Method needs to be installed to the root of your new project folder. For the planning phase, you can optionally
+perform it with powerful web agents, potentially resulting in higher quality results at a fraction of the cost it would
+take to complete if providing your own API key or credits in some Agentic tools. For planning, powerful thinking models
+and larger context - along with working as a partner with the agents will net the best results.
 
-If you are going to use the BMad Method with a Brownfield project (an existing project), review **[Working in the Brownfield](./working-in-the-brownfield.md)**.
+If you are going to use the BMad Method with a Brownfield project (an existing project), review
+**[Working in the Brownfield](./working-in-the-brownfield.md)**.
 
-If you do not see the diagrams that following rendering, you can install Markdown All in One along with the Markdown Preview Mermaid Support plugins to VSCode (or one of the forked clones). With these plugin's, if you right click on the tab when open, there should be a Open Preview option, or check the IDE documentation.
+If you do not see the diagrams that following rendering, you can install Markdown All in One along with the Markdown
+Preview Mermaid Support plugins to VSCode (or one of the forked clones). With these plugin's, if you right click on the
+tab when open, there should be a Open Preview option, or check the IDE documentation.
 
 ### The Planning Workflow (Web UI or Powerful IDE Agents)
 
-Before development begins, BMad follows a structured planning workflow that's ideally done in web UI for cost efficiency:
+Before development begins, BMad follows a structured planning workflow that's ideally done in web UI for cost
+efficiency:
 
 ```mermaid
 graph TD
@@ -70,9 +79,11 @@ graph TD
 
 #### Web UI to IDE Transition
 
-**Critical Transition Point**: Once the PO confirms document alignment, you must switch from web UI to IDE to begin the development workflow:
+**Critical Transition Point**: Once the PO confirms document alignment, you must switch from web UI to IDE to begin the
+development workflow:
 
-1. **Copy Documents to Project**: Ensure `docs/prd.md` and `docs/architecture.md` are in your project's docs folder (or a custom location you can specify during installation)
+1. **Copy Documents to Project**: Ensure `docs/prd.md` and `docs/architecture.md` are in your project's docs folder (or
+   a custom location you can specify during installation)
 2. **Switch to IDE**: Open your project in your preferred Agentic IDE
 3. **Document Sharding**: Use the PO agent to shard the PRD and then the Architecture
 4. **Begin Development**: Start the Core Development Cycle that follows
@@ -134,7 +145,8 @@ If you want to do the planning in the Web with Claude (Sonnet 4 or Opus), Gemini
 1. Navigate to `dist/teams/`
 2. Copy `team-fullstack.txt`
 3. Create new Gemini Gem or CustomGPT
-4. Upload file with instructions: "Your critical operating instructions are attached, do not break character as directed"
+4. Upload file with instructions: "Your critical operating instructions are attached, do not break character as
+   directed"
 5. Type `/help` to see available commands
 
 ### IDE Project Setup
@@ -150,13 +162,20 @@ There are two bmad agents - in the future they will be consolidated into the sin
 
 ### BMad-Master
 
-This agent can do any task or command that all other agents can do, aside from actual story implementation. Additionally, this agent can help explain the BMad Method when in the web by accessing the knowledge base and explaining anything to you about the process.
+This agent can do any task or command that all other agents can do, aside from actual story implementation.
+Additionally, this agent can help explain the BMad Method when in the web by accessing the knowledge base and explaining
+anything to you about the process.
 
-If you don't want to bother switching between different agents aside from the dev, this is the agent for you. Just remember that as the context grows, the performance of the agent degrades, therefore it is important to instruct the agent to compact the conversation and start a new conversation with the compacted conversation as the initial message. Do this often, preferably after each story is implemented.
+If you don't want to bother switching between different agents aside from the dev, this is the agent for you. Just
+remember that as the context grows, the performance of the agent degrades, therefore it is important to instruct the
+agent to compact the conversation and start a new conversation with the compacted conversation as the initial message.
+Do this often, preferably after each story is implemented.
 
 ### BMad-Orchestrator
 
-This agent should NOT be used within the IDE, it is a heavy weight special purpose agent that utilizes a lot of context and can morph into any other agent. This exists solely to facilitate the team's within the web bundles. If you use a web bundle you will be greeted by the BMad Orchestrator.
+This agent should NOT be used within the IDE, it is a heavy weight special purpose agent that utilizes a lot of context
+and can morph into any other agent. This exists solely to facilitate the team's within the web bundles. If you use a web
+bundle you will be greeted by the BMad Orchestrator.
 
 ### How Agents Work
 
@@ -214,15 +233,20 @@ dependencies:
 
 ## Technical Preferences System
 
-BMad includes a personalization system through the `technical-preferences.md` file located in `.bmad-core/data/` - this can help bias the PM and Architect to recommend your preferences for design patterns, technology selection, or anything else you would like to put in here.
+BMad includes a personalization system through the `technical-preferences.md` file located in `.bmad-core/data/` - this
+can help bias the PM and Architect to recommend your preferences for design patterns, technology selection, or anything
+else you would like to put in here.
 
 ### Using with Web Bundles
 
-When creating custom web bundles or uploading to AI platforms, include your `technical-preferences.md` content to ensure agents have your preferences from the start of any conversation.
+When creating custom web bundles or uploading to AI platforms, include your `technical-preferences.md` content to ensure
+agents have your preferences from the start of any conversation.
 
 ## Core Configuration
 
-The `bmad-core/core-config.yaml` file is a critical config that enables BMad to work seamlessly with differing project structures, more options will be made available in the future. Currently the most important is the devLoadAlwaysFiles list section in the yaml.
+The `bmad-core/core-config.yaml` file is a critical config that enables BMad to work seamlessly with differing project
+structures, more options will be made available in the future. Currently the most important is the devLoadAlwaysFiles
+list section in the yaml.
 
 ### Developer Context Files
 
@@ -235,9 +259,13 @@ devLoadAlwaysFiles:
   - docs/architecture/project-structure.md
 ```
 
-You will want to verify from sharding your architecture that these documents exist, that they are as lean as possible, and contain exactly the information you want your dev agent to ALWAYS load into it's context. These are the rules the agent will follow.
+You will want to verify from sharding your architecture that these documents exist, that they are as lean as possible,
+and contain exactly the information you want your dev agent to ALWAYS load into it's context. These are the rules the
+agent will follow.
 
-As your project grows and the code starts to build consistent patterns, coding standards should be reduced to include only the standards that the agent still makes with. The agent will look at surrounding code in files to infer the coding standards that are relevant to the current task.
+As your project grows and the code starts to build consistent patterns, coding standards should be reduced to include
+only the standards that the agent still makes with. The agent will look at surrounding code in files to infer the coding
+standards that are relevant to the current task.
 
 ## Getting Help
 
@@ -248,4 +276,5 @@ As your project grows and the code starts to build consistent patterns, coding s
 
 ## Conclusion
 
-Remember: BMad is designed to enhance your development process, not replace your expertise. Use it as a powerful tool to accelerate your projects while maintaining control over design decisions and implementation details.
+Remember: BMad is designed to enhance your development process, not replace your expertise. Use it as a powerful tool to
+accelerate your projects while maintaining control over design decisions and implementation details.

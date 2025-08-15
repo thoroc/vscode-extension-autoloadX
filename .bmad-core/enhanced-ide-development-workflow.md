@@ -1,6 +1,7 @@
 # Enhanced Development Workflow
 
-This is a simple step-by-step guide to help you efficiently manage your development workflow using the BMad Method. Refer to the **[<ins>User Guide</ins>](user-guide.md)** for any scenario that is not covered here.
+This is a simple step-by-step guide to help you efficiently manage your development workflow using the BMad Method.
+Refer to the **[<ins>User Guide</ins>](user-guide.md)** for any scenario that is not covered here.
 
 ## Create new Branch
 

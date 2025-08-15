@@ -2,14 +2,18 @@
 
 > **HIGHLY RECOMMENDED: Use Gemini Web or Gemini CLI for Brownfield Documentation Generation!**
 >
-> Gemini Web's 1M+ token context window or Gemini CLI (when it's working) can analyze your ENTIRE codebase, or critical sections of it, all at once (obviously within reason):
+> Gemini Web's 1M+ token context window or Gemini CLI (when it's working) can analyze your ENTIRE codebase, or critical
+> sections of it, all at once (obviously within reason):
 >
 > - Upload via GitHub URL or use gemini cli in the project folder
-> - If working in the web: use `npx bmad-method flatten` to flatten your project into a single file, then upload that file to your web agent.
+> - If working in the web: use `npx bmad-method flatten` to flatten your project into a single file, then upload that
+>   file to your web agent.
 
 ## What is Brownfield Development?
 
-Brownfield development refers to adding features, fixing bugs, or modernizing existing software projects. Unlike greenfield (new) projects, brownfield work requires understanding existing code, respecting constraints, and ensuring new changes integrate seamlessly without breaking existing functionality.
+Brownfield development refers to adding features, fixing bugs, or modernizing existing software projects. Unlike
+greenfield (new) projects, brownfield work requires understanding existing code, respecting constraints, and ensuring
+new changes integrate seamlessly without breaking existing functionality.
 
 ## When to Use BMad for Brownfield
 
@@ -22,11 +26,14 @@ Brownfield development refers to adding features, fixing bugs, or modernizing ex
 
 ## When NOT to use a Brownfield Flow
 
-If you have just completed an MVP with BMad, and you want to continue with post-MVP, its easier to just talk to the PM and ask it to work with you to create a new epic to add into the PRD, shard out the epic, update any architecture documents with the architect, and just go from there.
+If you have just completed an MVP with BMad, and you want to continue with post-MVP, its easier to just talk to the PM
+and ask it to work with you to create a new epic to add into the PRD, shard out the epic, update any architecture
+documents with the architect, and just go from there.
 
 ## The Complete Brownfield Workflow
 
-1. **Follow the [<ins>User Guide - Installation</ins>](user-guide.md#installation) steps to setup your agent in the web.**
+1. **Follow the [<ins>User Guide - Installation</ins>](user-guide.md#installation) steps to setup your agent in the
+   web.**
 2. **Generate a 'flattened' single file of your entire codebase** run: `npx bmad-method flatten`
 
 ### Choose Your Approach
@@ -205,11 +212,8 @@ The PO ensures:
 
 ### Phase 4: Save and Shard Documents
 
-1. Save your PRD and Architecture as:
-   docs/brownfield-prd.md
-   docs/brownfield-architecture.md
-2. Shard your docs:
-   In your IDE
+1. Save your PRD and Architecture as: docs/brownfield-prd.md docs/brownfield-architecture.md
+2. Shard your docs: In your IDE
 
    ```bash
    @po
@@ -359,6 +363,8 @@ Is this a major enhancement affecting multiple systems?
 
 ## Conclusion
 
-Brownfield development with BMad-Method provides structure and safety when modifying existing systems. The key is providing comprehensive context through documentation, using specialized templates that consider integration requirements, and following workflows that respect existing constraints while enabling progress.
+Brownfield development with BMad-Method provides structure and safety when modifying existing systems. The key is
+providing comprehensive context through documentation, using specialized templates that consider integration
+requirements, and following workflows that respect existing constraints while enabling progress.
 
 Remember: **Document First, Plan Carefully, Integrate Safely**

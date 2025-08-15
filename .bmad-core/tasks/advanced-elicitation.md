@@ -58,11 +58,14 @@ User can request advanced elicitation on any agent output:
 
 When invoked after outputting a section:
 
-1. **Provide Context Summary**: Give a brief 1-2 sentence summary of what the user should look for in the section just presented
+1. **Provide Context Summary**: Give a brief 1-2 sentence summary of what the user should look for in the section just
+   presented
 
-2. **Explain Visual Elements**: If the section contains diagrams, explain them briefly before offering elicitation options
+2. **Explain Visual Elements**: If the section contains diagrams, explain them briefly before offering elicitation
+   options
 
-3. **Clarify Scope Options**: If the section contains multiple distinct items, inform the user they can apply elicitation actions to:
+3. **Clarify Scope Options**: If the section contains multiple distinct items, inform the user they can apply
+   elicitation actions to:
    - The entire section as a whole
    - Individual items within the section (specify which item when selecting an action)
 

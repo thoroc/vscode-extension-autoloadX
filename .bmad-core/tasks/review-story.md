@@ -1,6 +1,7 @@
 # review-story
 
-When a developer agent marks a story as "Ready for Review", perform a comprehensive senior developer code review with the ability to refactor and improve code directly.
+When a developer agent marks a story as "Ready for Review", perform a comprehensive senior developer code review with
+the ability to refactor and improve code directly.
 
 ## Prerequisites
 
@@ -73,7 +74,8 @@ When a developer agent marks a story as "Ready for Review", perform a comprehens
 
 ## Update Story File - QA Results Section ONLY
 
-**CRITICAL**: You are ONLY authorized to update the "QA Results" section of the story file. DO NOT modify any other sections.
+**CRITICAL**: You are ONLY authorized to update the "QA Results" section of the story file. DO NOT modify any other
+sections.
 
 After review and any refactoring, append your results to the story file in the QA Results section:
 

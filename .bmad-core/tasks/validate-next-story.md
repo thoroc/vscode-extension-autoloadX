@@ -2,14 +2,17 @@
 
 ## Purpose
 
-To comprehensively validate a story draft before implementation begins, ensuring it is complete, accurate, and provides sufficient context for successful development. This task identifies issues and gaps that need to be addressed, preventing hallucinations and ensuring implementation readiness.
+To comprehensively validate a story draft before implementation begins, ensuring it is complete, accurate, and provides
+sufficient context for successful development. This task identifies issues and gaps that need to be addressed,
+preventing hallucinations and ensuring implementation readiness.
 
 ## SEQUENTIAL Task Execution (Do not proceed until current Task is complete)
 
 ### 0. Load Core Configuration and Inputs
 
 - Load `.bmad-core/core-config.yaml`
-- If the file does not exist, HALT and inform the user: "core-config.yaml not found. This file is required for story validation."
+- If the file does not exist, HALT and inform the user: "core-config.yaml not found. This file is required for story
+  validation."
 - Extract key configurations: `devStoryLocation`, `prd.*`, `architecture.*`
 - Identify and load the following inputs:
   - **Story file**: The drafted story to validate (provided by user or discovered in `devStoryLocation`)
@@ -20,7 +23,8 @@ To comprehensively validate a story draft before implementation begins, ensuring
 ### 1. Template Completeness Validation
 
 - Load `bmad-core/templates/story-tmpl.md` and extract all section headings from the template
-- **Missing sections check**: Compare story sections against template sections to verify all required sections are present
+- **Missing sections check**: Compare story sections against template sections to verify all required sections are
+  present
 - **Placeholder validation**: Ensure no template placeholders remain unfilled (e.g., `{{EpicNum}}`, `{{role}}`, `_TBD_`)
 - **Agent section verification**: Confirm all sections from template exist for future agent use
 - **Structure compliance**: Verify story follows template structure and formatting
